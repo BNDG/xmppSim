@@ -1,0 +1,15 @@
+.gradle
+.idea
+.cxx
+.externalNativeBuild
+build
+captures
+
+._*
+*.iml
+.DS_Store
+local.properties
+/app/preview
+/app/release
+/*.hprof
+/app/schemas/com.hjq.demo.chat.dao.AppDatabase

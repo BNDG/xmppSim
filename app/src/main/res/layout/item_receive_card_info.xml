@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/msg_padding_bottom">
+
+    <TextView
+        android:id="@+id/tv_timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="17:00" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_activity">
+
+        <ImageView
+            android:id="@+id/sdv_avatar"
+            android:layout_width="@dimen/chat_avatar_width"
+            android:layout_height="@dimen/chat_avatar_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:scaleType="fitXY"
+            android:src="@mipmap/default_user_avatar" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_8"
+            android:layout_toRightOf="@id/sdv_avatar"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_group_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_2"
+                android:textColor="@color/chat_nickname_text"
+                android:textSize="@dimen/chat_nickname_text_size"
+                android:visibility="gone"
+                tools:text="libai13888888888" />
+
+            <com.hjq.demo.widget.ChatView xmlns:chat="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cv_card_info"
+                style="@style/chat_receive_bubble">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_contact_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp_7"
+                    android:paddingRight="@dimen/dp_10"
+                    android:textColor="@color/common_text_color"
+                    tools:text="kxnem jjdklll" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_contact"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_toRightOf="@id/tv_contact_name"
+                    android:src="@mipmap/default_user_avatar" />
+            </com.hjq.demo.widget.ChatView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

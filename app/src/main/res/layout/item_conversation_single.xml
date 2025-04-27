@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_tab_bg"
+        android:clickable="false"
+        android:paddingTop="@dimen/dp_3"
+        android:paddingBottom="@dimen/dp_3">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/sdv_avatar"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:src="@mipmap/default_user_avatar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_toRightOf="@id/sdv_avatar"
+            android:ellipsize="end"
+            android:maxWidth="@dimen/dp_200"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/common_text_color"
+            android:textSize="@dimen/sp_16"
+            tools:text="微软小冰微软小冰微软小冰微软小冰微软小冰微软小冰" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_create_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/dp_12"
+            android:text="昨天"
+            android:textColor="@color/chat_subtitle_color"
+            android:textSize="@dimen/sp_12" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nick_name"
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:layout_toRightOf="@id/sdv_avatar"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/dp_30">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:src="@drawable/msg_state_fail_resend"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_last_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/chat_subtitle_color"
+                android:textSize="@dimen/conversation_msg_text_size"
+                tools:text="三点几了,做撚啊做,饮茶先啦" />
+        </LinearLayout>
+
+        <com.hjq.demo.widget.badgetextview.MaterialBadgeTextView
+            android:id="@+id/tv_unread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/sdv_avatar"
+            android:layout_alignRight="@id/sdv_avatar"
+            android:layout_marginTop="@dimen/dp_0_5"
+            android:layout_marginRight="@dimen/dp_m_10"
+            android:background="@color/unread_bg"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_12"
+            android:visibility="invisible"
+            tools:text="22"
+            tools:visibility="visible" />
+
+    </RelativeLayout>
+
+    <View style="@style/menu_item_line" />
+</LinearLayout>

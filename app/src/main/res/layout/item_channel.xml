@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:padding="@dimen/dp_5">
+
+
+    <RelativeLayout
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/dp_5"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/group_default" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_toRightOf="@+id/avatar"
+            android:ellipsize="middle"
+            android:maxEms="13"
+            android:singleLine="true"
+            android:textAppearance="?textAppearanceTitleMedium"
+            android:textSize="@dimen/sp_15"
+            android:textStyle="bold"
+            tools:text="f-droid 自由安卓应用分享自由安卓droid" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/room_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_alignLeft="@+id/name"
+            android:layout_marginTop="@dimen/dp_3"
+            android:maxLines="2"
+            android:textAppearance="?textAppearanceBodyMedium"
+            tools:text="prosody@conference.prosody.im" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/nusers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/room_address"
+            android:layout_alignLeft="@+id/name"
+            android:layout_marginTop="@dimen/dp_3"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textAppearance="?textAppearanceLabelMedium"
+            tools:text="在线人数[111 OnLine]" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/nusers"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@id/nusers"
+            android:singleLine="true"
+            android:textAppearance="?textAppearanceLabelMedium"
+            android:textSize="@dimen/sp_15"
+            tools:text="EN" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info"
+        android:layout_alignLeft="@+id/info"
+        android:layout_margin="@dimen/dp_5"
+        android:maxLines="2"
+        android:textAppearance="?textAppearanceBodyMedium"
+        tools:text="自由游戏分享交流群d related discuCommon Room for Software Freedom Camp 2022 Diversity edition| https://camp.fsci.in | This room is public space, use camp-learners mailing list if you want a more private space | You can use this room to ask general questions or share information that are useful to others" />
+
+</RelativeLayout>

@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 通用的 -->
+    <string name="common_loading">加载中&#8230;</string>
+
+    <string name="common_unknown_error">未知错误</string>
+
+    <string name="common_confirm">确定</string>
+    <string name="common_cancel">取消</string>
+
+    <string name="common_year">年</string>
+    <string name="common_month">月</string>
+    <string name="common_day">日</string>
+
+    <string name="common_hour">时</string>
+    <string name="common_minute">分</string>
+    <string name="common_second">秒</string>
+
+    <string name="common_crash_hint">应用出了点小意外，正在重新启动</string>
+
+    <string name="common_network_error">当前网络不可用，请检查网络设置</string>
+
+    <string name="common_video_error_not_support">该视频不适合在此设备上播放</string>
+    <string name="common_video_error_unknown">无法播放此视频</string>
+    <string name="common_video_error_supplement">错误类型：%d，错误代码：%d</string>
+
+    <string name="common_phone_input_hint">请输入手机号码</string>
+    <string name="common_phone_input_error">手机号输入不正确</string>
+
+    <string name="common_password_input_error">请输入密码</string>
+    <string name="common_password_input_unlike">两次密码输入不一致，请重新输入</string>
+
+    <string name="common_code_input_hint">请输入验证码</string>
+    <string name="common_code_send">发送验证码</string>
+    <string name="common_code_send_hint">验证码已发送，请注意查收</string>
+    <string name="common_code_error_hint">验证码错误，请检查输入</string>
+
+    <string name="common_step_next">下一步</string>
+    <string name="common_step_complete">完成</string>
+
+    <string name="common_permission_alert">授权提醒</string>
+    <string name="common_permission_fail_1">授权失败，请正确授予权限</string>
+    <string name="common_permission_fail_2">获取权限失败，请手动授予权限</string>
+    <string name="common_permission_fail_3">获取权限失败，请手动授予%s</string>
+    <string name="common_permission_fail_4">没有授予后台定位权限，请您选择"始终允许"</string>
+    <string name="common_permission_goto">前往授权</string>
+
+    <string name="common_permission_calendar">日历权限</string>
+    <string name="common_permission_camera">相机权限</string>
+    <string name="common_permission_contacts">通讯录权限</string>
+    <string name="common_permission_location">定位权限</string>
+    <string name="common_permission_location_background">后台定位权限</string>
+    <string name="common_permission_microphone">麦克风权限</string>
+    <string name="common_permission_phone">电话权限</string>
+    <string name="common_permission_call_log">通话记录权限</string>
+    <string name="common_permission_sensors">身体传感器权限</string>
+    <string name="common_permission_activity_recognition">健身运动权限</string>
+    <string name="common_permission_sms">短信权限</string>
+    <string name="common_permission_storage">存储权限</string>
+
+    <string name="common_permission_install">安装应用权限</string>
+    <string name="common_permission_notification">通知栏权限</string>
+    <string name="common_permission_window">悬浮窗权限</string>
+    <string name="common_permission_setting">系统设置权限</string>
+
+    <string name="common_network_hint">当前没有网络连接，请检查网络设置</string>
+    <string name="common_no_more_data">没有更多数据了</string>
+
+    <string name="common_web_ssl_error_title">当前网站安全证书已过期或不可信\n是否继续浏览</string>
+    <string name="common_web_ssl_error_allow">继续浏览</string>
+    <string name="common_web_ssl_error_reject">返回上一页</string>
+
+    <string name="common_web_location_permission_title">当前网站需要获取您的地理位置</string>
+    <string name="common_web_location_permission_allow">授予</string>
+    <string name="common_web_location_permission_reject">拒绝</string>
+
+    <string name="common_web_call_phone_title">当前号码 %s</string>
+    <string name="common_web_call_phone_allow">拨打</string>
+    <string name="common_web_call_phone_reject">取消</string>
+
+    <!-- 网络请求 -->
+
+    <string name="http_token_error">登录失效，请重新登录</string>
+    <string name="http_data_explain_error">数据解析异常，请稍后</string>
+    <string name="http_server_out_time">服务器请求超时，请稍后再试</string>
+    <string name="http_network_error">请求失败，请检查网络设置</string>
+    <string name="http_response_error">服务器响应异常，请稍后再试，响应码：%d，响应信息：%s</string>
+    <string name="http_server_error">服务器连接异常，请稍后再试</string>
+    <string name="http_request_cancel">请求被中断，请重试</string>
+
+    <!-- 状态布局 -->
+    <string name="status_layout_no_data">空空如也</string>
+    <string name="status_layout_error_request">请求出错，请重试</string>
+    <string name="status_layout_error_network">网络错误，请重试</string>
+    <string name="status_layout_retry">重试</string>
+
+    <!-- 地区对话框 -->
+    <string name="address_title">请选择地区</string>
+    <string name="address_hint">请选择</string>
+
+    <!-- 日期对话框 -->
+    <string name="date_title">请选择日期</string>
+
+    <!-- 时间对话框 -->
+    <string name="time_title">请选择时间</string>
+
+    <!-- 升级对话框 -->
+    <string name="update_title">发现新版本</string>
+
+    <string name="update_content">更新内容</string>
+
+    <string name="update_no">下次再说</string>
+    <string name="update_yes">立即更新</string>
+
+    <string name="update_status_start">正在下载</string>
+    <string name="update_status_running">下载中 %d%%</string>
+    <string name="update_status_successful">下载完成，点击安装</string>
+    <string name="update_status_failed">下载失败，点击重试</string>
+
+    <string name="update_no_update">当前已是最新版本</string>
+
+    <string name="update_notification_channel_id">update</string>
+    <string name="update_notification_channel_name">升级通知</string>
+
+    <!-- 分享对话框 -->
+    <string name="share_title">分享到&#8230;</string>
+
+    <string name="share_platform_wechat">微信</string>
+    <string name="share_platform_moment">朋友圈</string>
+    <string name="share_platform_qq">QQ</string>
+    <string name="share_platform_qzone">QQ空间</string>
+    <string name="share_platform_link">复制链接</string>
+
+    <string name="share_platform_copy_hint">已复制到剪贴板</string>
+
+    <!-- 支付密码对话框 -->
+    <string name="pay_title">请输入支付密码</string>
+
+    <!-- 选择对话框 -->
+    <string name="select_min_hint">至少要选择 %d 项</string>
+    <string name="select_max_hint">最多只能选择 %d 项</string>
+
+    <!-- 身份校验对话框 -->
+    <string name="safe_title">身份校验</string>
+
+    <!-- 首页 -->
+    <string name="home_exit_hint">再按一次退出</string>
+    <string name="home_nav_index">首页</string>
+    <string name="home_nav_found">发现</string>
+    <string name="home_nav_message">消息</string>
+    <string name="home_nav_me">我的</string>
+
+    <!-- 登录 -->
+    <string name="login_register">注册</string>
+    <string name="login_forget">忘记密码？</string>
+    <string name="login_text">登录</string>
+
+    <string name="login_other">其他登录方式</string>
+
+    <!-- 注册 -->
+    <string name="register_title">注册</string>
+    <string name="register_password_hint1">设置6&#8211;18位登录密码</string>
+    <string name="register_password_hint2">请再次输入一次密码</string>
+
+    <!-- 设置 -->
+    <string name="setting_title">设置</string>
+
+    <string name="setting_language_switchover">语言切换</string>
+    <string name="setting_language_simple">简体中文</string>
+    <string name="setting_language_complex">繁体中文</string>
+    <string name="setting_update">检查更新</string>
+
+    <string name="setting_password">修改密码</string>
+    <string name="setting_phone">修改手机</string>
+
+    <string name="setting_auto">自动登录</string>
+    <string name="setting_cache">缓存清理</string>
+
+    <string name="setting_agreement">隐私协议</string>
+    <string name="setting_about">关于我们</string>
+
+    <string name="setting_exit">退出登录</string>
+
+    <!-- 关于 -->
+    <string name="about_title">关于我们</string>
+    <string name="about_author"><font color="#85b84f">Android</font> 轮子哥</string>
+
+    <string name="about_copyright">Copyright © 2018 &#8211; 2021</string>
+
+    <!-- 忘记密码 -->
+    <string name="password_forget_title">忘记密码</string>
+
+    <!-- 重置密码 -->
+    <string name="password_reset_title">设置登录密码</string>
+    <string name="password_reset_phone_hint1">设置6&#8211;18位登录密码</string>
+    <string name="password_reset_phone_hint2">重新输入一次密码</string>
+    <string name="password_reset_success">修改成功</string>
+
+    <!-- 修改手机号 -->
+    <string name="phone_reset_title">设置手机号</string>
+    <string name="phone_reset_change_hint">下次登录请使用更换后的新手机号登录</string>
+    <string name="phone_reset_commit">立即绑定</string>
+
+    <string name="phone_reset_commit_succeed">绑定成功</string>
+
+    <!-- 个人资料 -->
+    <string name="personal_data_title">个人资料</string>
+    <string name="personal_data_head">头像</string>
+
+    <string name="personal_data_id">用户ID</string>
+    <string name="personal_data_name">昵称</string>
+    <string name="personal_data_name_hint">设置昵称</string>
+
+    <string name="personal_data_address">地区</string>
+    <string name="personal_data_address_hint">请选择</string>
+
+    <!-- 浏览器 -->
+    <string name="web_title">网页加载中&#8230;</string>
+
+    <!-- 图片选择 -->
+    <string name="image_select_title">图片选择</string>
+    <string name="image_select_all">所有图片</string>
+
+    <string name="image_select_total">共 %d 张</string>
+
+    <string name="image_select_max_hint">本次最多只能选择 %d 张图片</string>
+
+    <string name="image_select_error">无法选中，该图片已经被删除</string>
+
+    <!-- 裁剪图片 -->
+    <string name="image_crop_error_not_support">裁剪失败，当前手机不支持裁剪图片</string>
+
+    <!-- 视频选择 -->
+    <string name="video_select_title">视频选择</string>
+    <string name="video_select_all">所有视频</string>
+
+    <string name="video_select_total">共 %d 个</string>
+
+    <string name="video_select_max_hint">本次最多只能选择 %d 个视频</string>
+
+    <string name="video_select_error">无法选中，该视频已经被删除</string>
+
+    <!-- 拍照和拍摄 -->
+    <string name="camera_launch_fail">无法启动相机</string>
+    <string name="camera_image_error">目标地址错误</string>
+
+    <!-- \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-   来自于chat                 -->
+    <string name="app_name">kptk</string>
+
+    <string name="tab_chats">聊天</string>
+    <string name="tab_discover">发现</string>
+    <string name="tab_me">我</string>
+
+    <string name="official_accounts">公共号</string>
+
+    <string name="enter_mobile_number">请填写手机号</string>
+    <string name="enter_wechat_password">请填写密码</string>
+    <string name="enter_verification_code">请填写验证码</string>
+    <string name="next">下一步</string>
+    <string name="verification_code">验证码</string>
+    <string name="get_verification_code">获取验证码</string>
+    <string name="login_hint_phone">你的手机号码</string>
+    <string name="login_hint_account">你的用户名</string>
+    <string name="login_hint_password">填写密码</string>
+    <string name="account">账号</string>
+    <string name="login">登录</string>
+
+    <string name="user_settings">资料设置</string>
+    <string name="share_contact">分享联系人</string>
+    <string name="add_star">特别关注</string>
+    <string name="block_contact">加入黑名单</string>
+    <string name="report">投诉</string>
+    <string name="send_message">发消息</string>
+    <string name="delete">删除</string>
+
+    <string name="login_via_mobile_number">手机号登录</string>
+    <string name="use_mobile_number_to_login">用手机号登录</string>
+    <string name="login_via_wechat_id_email_qq_id">登录</string>
+    <string name="use_wechat_id_email_qq_id_to_login">用户名登录</string>
+    <string name="login_via_password">用密码登录</string>
+    <string name="login_via_sms_verification_code">用短信验证码登录</string>
+    <string name="logging_in">正在登录...</string>
+    <string name="enter_your_password">密码不能为空，请输入密码</string>
+    <string name="enter_your_verification_code">验证码不能为空</string>
+    <string name="login_error">登录失败</string>
+    <string name="registering">正在注册...</string>
+    <string name="register">注册</string>
+    <string name="register_hint">没有账号？注册一个</string>
+    <string name="nick_name">昵称</string>
+    <string name="nick_name_label">昵称: %s</string>
+    <string name="nick_name_example">你的昵称</string>
+    <string name="password">密码</string>
+    <string name="save">保存</string>
+    <string name="edit">编辑</string>
+    <string name="intro">功能介绍</string>
+    <string name="file_transfer_intro">登录kptk电脑版，向我发消息，可以在手机与电脑间传输文字、图片、音频、视频 等文件。</string>
+
+    <string name="password_rules">密码必须是8-16位的数字、字符组合(不能是纯数字)</string>
+    <string name="send">发送</string>
+    <string name="sending">正在发送...</string>
+    <string name="copy">复制</string>
+    <string name="forward">转发</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="tips">提示</string>
+    <string name="recording_video">录制视频</string>
+    <string name="voice_call">语音通话</string>
+
+    <string name="go_setting">去设置</string>
+    <!--    个人资料-->
+    <string name="avatar">头像</string>
+    <string name="wx_id">kptk号: %s</string>
+    <string name="wechat_id">kptk号</string>
+    <string name="qr_code">二维码名片</string>
+    <string name="scan_qr_code_and_add_friends">扫码加好友</string>
+    <string name="sex">性别</string>
+    <string name="region">地区</string>
+    <string name="whats_up">个性签名</string>
+    <string name="from">来源</string>
+    <string name="account_label">账号: %s</string>
+
+    <string name="saving">正在保存</string>
+    <string name="wx_id_or_phone">用户名/手机号</string>
+    <!--    tab title                                 -->
+    <string name="new_friends">新的朋友</string>
+    <string name="tab_contacts">联系人</string>
+    <string name="group_chats">群聊</string>
+    <string name="settings">设置</string>
+    <string name="account_security">账号与安全</string>
+    <string name="chat_info">聊天信息</string>
+    <string name="personal_info">个人信息</string>
+    <string name="edit_name">更改名字</string>
+
+    <string name="set_chat_to_top">置顶聊天</string>
+    <string name="block_chat_msg">免打扰</string>
+    <string name="clear_chat_msg">清空聊天记录</string>
+
+    <string name="sex_male">男</string>
+    <string name="sex_female">女</string>
+
+    <string name="searching_for_user">正在查找联系人...</string>
+
+    <string name="connect_to_server_error">未连接服务器,检查网络后点击重试.</string>
+    <string name="add_to_home_screen">添加到桌面</string>
+    <string name="please_wait">请稍候...</string>
+
+    <string name="edit_contact">备注</string>
+    <string name="complete">完成</string>
+    <string name="remark_name">备注</string>
+    <string name="tag">标签</string>
+    <string name="phone_num">电话号码</string>
+    <string name="add_phone_num">添加电话号码</string>
+    <string name="description">描述</string>
+    <string name="add_description">添加更多备注信息</string>
+
+    <string name="search_friend_by_phone">来自手机号搜索</string>
+    <string name="search_friend_by_wx_id">来自kptk号搜索</string>
+    <string name="search_friend_by_people_nearby">来自附近的人</string>
+    <string name="search_friend_by_contact">来自手机通讯录</string>
+
+    <string name="more">更多</string>
+    <string name="more_info">更多信息</string>
+
+    <!--  permission  -->
+    <string name="request_permission">权限设置</string>
+    <string name="request_permission_location">在设置-应用-kptk-权限中开启位置信息权限，以正常使用位置共享、搜索等功能</string>
+    <string name="request_permission_camera">在设置-应用-kptk-权限中开启相机权限，以正常使用拍照、扫一扫等功能</string>
+    <string name="request_permission_storage">为确保接收到的图片、视频等内容能被正常浏览，kptk需要申请手机存储权限。</string>
+    <string name="request_permission_record_audio">在设置-应用-kptk-权限中开启麦克风权限，以正常使用语音、视频等功能</string>
+    <string name="request_permission_contacts">在设置-应用-kptk-权限中开启通讯录权限，以正常使用联系人查找功能</string>
+
+    <string name="moments">作品</string>
+    <string name="scan">扫一扫</string>
+    <string name="shake">摇一摇</string>
+    <string name="people_nearby">附近的人</string>
+    <string name="shopping">购物</string>
+    <string name="game">游戏</string>
+    <string name="mini_programs">小程序</string>
+    <string name="top_stories">看一看</string>
+    <string name="discover_search">搜一搜</string>
+
+    <string name="open_people_nearby_tips">查看附件的人功能将获取你的位置信息，你的位置信息会被保留一段时间。通过列表右上角的清除功能可随时手动清除位置信息。</string>
+    <!--    设置页-->
+    <string name="notifications">新消息提醒</string>
+    <string name="do_not_disturb">勿扰模式</string>
+    <string name="chats">聊天</string>
+    <string name="privacy">隐私</string>
+    <string name="general">通用</string>
+    <string name="about">关于kptk</string>
+    <string name="help_feedback">帮助与反馈</string>
+    <string name="wechat_services">插件</string>
+    <string name="switch_account">切换账号</string>
+
+    <string name="phone">手机号</string>
+    <string name="voice_print">声音锁</string>
+    <string name="emergency_contacts">应急联系人</string>
+    <string name="wechat_security_center">kptk安全中心</string>
+    <string name="wechat_security_center_tips">如果你遇到kptk被盗，无法登陆设备等问题，可以前往安全中心</string>
+
+    <string name="set_gender">设置性别</string>
+
+    <string name="add_contacts">添加朋友</string>
+    <string name="wechat_id_or_mobile">用户名/手机号</string>
+
+    <string name="modify_password">修改密码</string>
+    <string name="modify_password_rule">密码必须是8-16位的数字、字符组合（不能是纯数字）</string>
+    <string name="old_password">原密码</string>
+    <string name="old_password_hint">填写原密码</string>
+    <string name="new_password">新密码</string>
+    <string name="new_password_hint">填写新密码</string>
+    <string name="confirm_password">确认密码</string>
+
+    <string name="old_password_empty">原密码不能为空</string>
+    <string name="new_password_empty">新密码不能为空</string>
+    <string name="confirm_password_empty">确认密码不能为空</string>
+    <string name="confirm_password_incorrect">两次密码不一致</string>
+    <string name="modify_password_success_tips">kptk密码设置成功，以后可通过手机号+密码登录kptk</string>
+
+    <string name="mobile_contacts">查看手机通讯录</string>
+    <string name="change_mobile">更换手机号</string>
+
+    <string name="make_call">呼叫</string>
+    <string name="voice_or_video_call">音视频通话</string>
+
+    <string name="mobile_blocked_list">通讯录黑名单</string>
+    <string name="we_run">kptk运动</string>
+    <string name="channels">视频号</string>
+    <string name="chats_only">仅聊天</string>
+    <string name="privacy_manage">权限管理</string>
+    <string name="authorizations">授权管理</string>
+    <string name="methods_for_friend_me">添加我的方式</string>
+    <string name="find_mobile_contacts">向我推荐通讯录朋友</string>
+    <string name="find_mobile_contacts_tips">开启后，为你推荐已经开通kptk的手机联系人。</string>
+    <string name="require_friend_request">加我为朋友时需要验证</string>
+
+    <string name="blocked_contact_tips">已添加至黑名单，你将不再收到对方的消息</string>
+
+    <string name="show_more">全文</string>
+    <string name="show_less">收起</string>
+
+    <string name="album">相册</string>
+    <string name="battery_optimization_disable_dialog_title">电池优化</string>
+    <string name="battery_optimization_disable_dialog_message">您的设备针对 kptk 做了一些重度的电池优化，这可能导致通知的延迟或者甚至丢失消息。\n\n要使用kptk的节能优化吗?</string>
+    <string name="user_not_found">未能查找到用户</string>
+    <string name="video_call">视频通话</string>
+    <string name="mute">静音</string>
+    <string name="Hands_free">免提</string>
+    <string name="change_voice">转音频</string>
+    <string name="hang_up">挂断</string>
+    <string name="negative_duration">%1$s</string>
+    <string name="switch_camera">切换摄像头</string>
+    <string name="answer">接听</string>
+    <string name="waiting_for_accept">正在等待对方接听</string>
+    <string name="end_call">通话结束</string>
+    <string name="accept_call">同意通话</string>
+    <string name="sent_refuse_call">已拒绝</string>
+    <string name="received_refuse_call">对方已拒绝</string>
+    <string name="received_busy_call">对方忙线中</string>
+    <string name="received_cancel_call">对方已取消</string>
+    <string name="sent_busy_call">忙线中</string>
+    <string name="sent_cancel_call">已取消</string>
+    <string name="nobody_answer">对方无应答</string>
+    <string name="group_manager">群管理</string>
+    <string name="group_transfer_ownership">群主管理权转让</string>
+    <string name="already_copy">已复制</string>
+    <string name="received_room_invite">\"%s\"邀请你加入了群聊</string>
+    <string name="search_chat_msg">查找聊天记录</string>
+    <string name="connection_normally">连接正常</string>
+    <string name="connection_closed">连接断开</string>
+
+    <string name="select_all">全选</string>
+    <string name="normal_group_name">群聊</string>
+    <string name="unnamed">未命名</string>
+    <string name="share">分享</string>
+    <string name="latest_chats">最近聊天</string>
+    <string name="create_new_chat">创建新的聊天</string>
+    <string name="send_to">发送给:</string>
+    <string name="select_chat">选择一个聊天</string>
+    <string name="creating_group">正在创建群聊...</string>
+    <string name="adding_member">正在添加联系人...</string>
+    <string name="chat_members">聊天成员</string>
+    <string name="http_response_null_body">服务器数据返回异常，请稍后再试</string>
+    <string name="http_response_md5_error">下载失败，文件 md5 校验失败</string>
+    <string name="account_register">用户名注册</string>
+    <string name="phone_register">手机号注册</string>
+    <string name="conversation_unavailable_group">无法在已退出的群聊中发送消息</string>
+    <string name="only_admin_permission">需要管理员权限</string>
+    <string name="create_group">发起群聊</string>
+    <string name="kicked_from_group">你被移出群聊</string>
+    <string name="scan_result">扫码结果</string>
+    <string name="open_url_by_browser">前往浏览器打开该链接？</string>
+    <string name="join">加入</string>
+    <string name="group_calling">群通话正在进行中</string>
+    <string name="created_voice_call">%s发起了语音通话</string>
+    <string name="created_video_call">%s发起了视频通话</string>
+    <string name="group_call_end">通话已经结束</string>
+    <string name="contacts_count_str">%d位联系人</string>
+    <string name="start_chat_message">我通过了你的朋友验证请求，现在我们可以开始聊天了</string>
+    <string name="auto_start_setting">自启动设置</string>
+    <string name="power_manager_setting">后台耗电设置</string>
+    <string name="battery_manager_setting">电池优化设置</string>
+    <string name="chat_team_ait_all">所有人</string>
+    <string name="chat_message_ait_contact_title">选择提醒</string>
+    <string name="security">安全中心</string>
+    <string name="verification_msg">验证消息</string>
+    <string name="my_group_chats">我的群聊</string>
+    <string name="pinned_this_chat">置顶该聊天</string>
+    <string name="delete_this_chat">删除该聊天</string>
+    <string name="add_friends">添加朋友</string>
+    <string name="theme">主题</string>
+    <string name="confirm_delete">确定删除吗?</string>
+    <string name="add_to_contact">添加到联系人</string>
+    <string name="help_center">帮助中心</string>
+    <string name="file_management">文件管理</string>
+    <string name="file">文件</string>
+    <string name="chat_setting">聊天设置</string>
+    <string name="audio_speakerphone">听筒播放语音</string>
+    <string name="notification_setting">通知设置</string>
+    <string name="notification_management">通知管理</string>
+    <string name="message_setting">消息设置</string>
+    <string name="chat_bg">聊天背景</string>
+    <string name="common_only_copy">仅复制</string>
+    <string name="downloading">下载中...</string>
+    <string name="chat_message_file_size_limit_tips">当前文件大小超出%sM发送限制，请重新选择</string>
+    <string name="file_open_failed">打开失败，文件可能被移动或已删除。</string>
+    <string name="choose_open">选择打开方式</string>
+    <string name="send_file_failed">发送文件失败</string>
+    <string name="join_group">加入群聊</string>
+    <string name="cancel_pinned_this_chat">取消置顶</string>
+    <string name="show_all_members">查看全部成员</string>
+    <string name="conversation_ait_tip">[有人@我]</string>
+    <string name="channel_discover">发现频道</string>
+    <string name="group_destroyed">群聊已解散</string>
+    <string name="multi_languages">多语言</string>
+    <string name="follow_system">跟随系统</string>
+    <string name="simplified_chinese">简体中文</string>
+    <string name="english">English</string>
+    <string name="scan_add_contact">扫描对方的二维码</string>
+    <string name="group_name">群名称</string>
+    <string name="group_info">群信息</string>
+    <string name="manage_group">群管理</string>
+    <string name="mute_notifications">屏蔽群消息</string>
+    <string name="leave_room">删除并退出</string>
+    <string name="disband_group">解散该群聊</string>
+    <string name="search">搜索</string>
+    <string name="confirm_mobile">确认手机号码</string>
+    <string name="send_sms">我们将发送验证码短信到这个号码</string>
+    <string name="send_sms_tick">%d秒后...</string>
+    <string name="send_friend_request">申请添加朋友</string>
+    <string name="set_alias">设置备注</string>
+    <string name="set_privacy">设置朋友权限</string>
+    <string name="chats_more_privacy">聊天，作品等</string>
+
+    <string name="sunday">星期日</string>
+    <string name="monday">星期一</string>
+    <string name="tuesday">星期二</string>
+    <string name="wednesday">星期三</string>
+    <string name="thursday">星期四</string>
+    <string name="friday">星期五</string>
+    <string name="saturday">星期六</string>
+    <string name="yesterday">昨天</string>
+    <string name="midnight">凌晨</string>
+    <string name="morning">上午</string>
+    <string name="noon">中午</string>
+    <string name="afternoon">下午</string>
+    <string name="evening">晚上</string>
+    <string name="enter_password">密码</string>
+    <string name="enter_account">用户名如：zhangsan</string>
+    <string name="camera">拍摄</string>
+    <string name="forgot_old_password">忘记原密码？</string>
+    <string name="select_jitsi">jitsi服务选择</string>
+    <string name="discover_channel">发现频道</string>
+    <string name="done_contacts">确定(%d)</string>
+    <string name="done">确定</string>
+    <string name="release_to_cancel">松开手指,取消发送</string>
+    <string name="release_to_send">松开发送</string>
+    <string name="hold_to_talk">按住录音</string>
+    <string name="i_am">我是</string>
+    <string name="message_too_short">录音时间太短</string>
+    <string name="from_search_account">对方通过搜索用户名添加</string>
+    <string name="not_be_found_group">未能搜索到该群</string>
+    <string name="end_record_tip">%d秒后将结束录音</string>
+    <string name="Block">加入黑名单</string>
+    <string name="block_content">加入黑名单，你将不再受到对方的消息。</string>
+    <string name="delete_contacts">删除联系人</string>
+    <string name="delete_contact_tips">将联系人 \"%s\" 删除，将同时删除与该联系人的聊天记录"</string>
+    <string name="sure_to_quit">确定退出吗？</string>
+    <string name="join_group_tips">是否加入[%1$s]?</string>
+    <string name="notification_detected_prompt">检测到通知权限未开启，开启后可确保及时接收消息。是否前往设置开启？</string>
+    <string name="team">%s团队</string>
+    <string name="welcome_back_to">欢迎你再次回到 %s 。如果你在使用过程中有任何的问题或建议，记得给我发信反馈哦。\n \n </string>
+    <string name="ensure_setting_hit">为了确保您能及时的接收到消息，请按照以下方式检查应用的设置： \n</string>
+    <string name="enable_auto_start">1、打开APP的自启动权限。#前去设置action::go_auto_start# \n</string>
+    <string name="add_app_to_whitelist">2、把APP加入一键清理的白名单(即锁定APP)。 \n</string>
+    <string name="enable_power_manager">3、在电池管理页面，允许APP后台耗电。#前去设置action::go_power_manager#</string>
+    <string name="whats_fresh">功能介绍</string>
+    <string name="check_for_updates">检查新版本</string>
+    <string name="license_and_service">《软件许可及服务协议》</string>
+    <string name="privacy_policy_summary">《隐私保护指引》</string>
+    <string name="shared_groups">共同群聊</string>
+    <string name="not_open">暂未开放</string>
+    <string name="my_collection">我的收藏</string>
+    <string name="received">我接收的</string>
+    <string name="sent">我发送的</string>
+    <string name="unread_tips">%d条未读消息</string>
+    <string name="view_speech_record">查看发言记录</string>
+    <string name="group_chat_invite_msg">你邀请%s加入了群聊</string>
+    <string name="delete_group_chat_history">确定删除群的聊天记录吗?</string>
+    <string name="leave_group_chat">是否删除群聊并退出?</string>
+    <string name="confirm_phone">确认手机号码</string>
+    <string name="will_send_sms">我们将发送验证码短信到这个号码：</string>
+    <string name="disband_group_chat">是否解散该群聊?</string>
+    <string name="deletion_chat_history_with">确定删除和%s的聊天记录吗?</string>
+    <string name="sented">已发送</string>
+    <string name="permissions_obtained_some">获取部分权限成功，但部分权限未正常授予</string>
+    <string name="permanently_denied">被永久拒绝授权，请手动授予权限</string>
+    <string name="failed_permission">获取权限失败</string>
+    <string name="choose_file">选择文件</string>
+    <string name="no_permission">没有权限!</string>
+    <string name="copied">已复制</string>
+    <string name="sent_failed">发送失败</string>
+    <string name="failed">失败了</string>
+    <string name="to_join_group_call">当前群通话正在进行中,是否加入?</string>
+    <string name="uploading">正在上传...</string>
+    <string name="success">成功</string>
+    <string name="already_followed">已设为特别关注</string>
+    <string name="unfollowed">已取消特别关注</string>
+    <string name="added">已添加</string>
+    <string name="accept">接受</string>
+    <string name="swipe_up_to_cancel">上滑取消发送</string>
+    <string name="set_remarks">设置备注</string>
+    <string name="reject">拒接</string>
+    <string name="search_label">搜索:</string>
+    <string name="not_open_yet">暂未开放</string>
+    <string name="privacy_agreement_dialog">项目用到了友盟统计和bugly收集。\n\n 搜索一下%s，了解友盟和bugly。</string>
+    <string name="privacy_agreement_name">《bing搜索》</string>
+    <string name="quote">引用</string>
+    <string name="my_group_nick">我在群里的昵称</string>
+    <string name="group_administrator">群管理员</string>
+    <string name="remove">移除</string>
+    <string name="add_administrator">添加管理员</string>
+    <string name="remove_group_administrator">确定移除%s的管理员权限吗？</string>
+    <string name="group_subject">群公告</string>
+    <string name="new_message_notification">新消息通知</string>
+    <string name="connection_status">连接状态</string>
+    <string name="call_invitation">音视频通话邀请</string>
+    <string name="incoming_calls">来电</string>
+    <string name="notify_running_tips">%s正在节能运行</string>
+    <string name="member_banned">%s 被封禁了。</string>
+    <string name="backup_chat_history">备份聊天记录</string>
+    <string name="no_right_to_speak">无发言权限</string>
+    <string name="require_password">需要密码</string>
+    <string name="only_owner_permission">只有群主有权更改</string>
+    <string name="group_avatar">群头像</string>
+    <string name="mute_member">禁言</string>
+    <string name="cancel_mute">解除禁言</string>
+    <string name="recommend_contact">我向你推荐了 %s [xmpp:%s]</string>
+    <string name="image">图片</string>
+    <string name="voice">语音</string>
+    <string name="call_msg">通话消息</string>
+    <string name="video">视频</string>
+    <string name="server">服务器</string>
+    <string name="enter_server">服务器地址如：yax.im</string>
+    <string name="register_tips">服务器未开放客户端注册的请去对应平台注册</string>
+    <string name="xmpp_id">jack@yax.im</string>
+</resources>

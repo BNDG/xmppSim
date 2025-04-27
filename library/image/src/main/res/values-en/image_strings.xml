@@ -1,0 +1,16 @@
+<resources>
+    <string name="image_doodle">Graffiti</string>
+    <string name="image_text">character</string>
+    <string name="image_mosaic">mosaic</string>
+    <string name="image_clip">Crop</string>
+    <string name="image_reset">reduction</string>
+    <string name="image_done">Done</string>
+    <string name="image_cancel">Cancel</string>
+    <string name="image_rotate">rotate</string>
+
+    <string name="image_mosaic_tip">Please apply blur directly on the picture</string>
+    <string name="image_undo">Cancel</string>
+    <string name="image_all_photo">All photos</string>
+    <string name="image_original">Original picture</string>
+    <string name="image_preview">Preview</string>
+</resources>

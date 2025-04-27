@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_8"
+    android:gravity="center">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_system_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_round_light_gray"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_3"
+        android:paddingRight="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_3"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_13"
+        tools:text="你邀请了他和我和我和我他和我和我和我加入群聊" />
+
+</LinearLayout>
+

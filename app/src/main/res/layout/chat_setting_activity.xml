@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg_main"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:text="@string/notification_setting"
+                android:textColor="@color/main_menu_text_color"
+                android:textSize="@dimen/sp_13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_bar" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/sb_setting_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_leftText="@string/notification_management"
+                app:bar_rightDrawable="@drawable/arrows_right_ic"
+                tools:bar_rightHint="@string/setting_language_simple" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:text="@string/message_setting"
+                android:textColor="@color/main_menu_text_color"
+                android:textSize="@dimen/sp_13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_bar" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/sb_setting_audio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_leftText="@string/audio_speakerphone">
+
+                <com.hjq.widget.view.SwitchButton
+                    android:id="@+id/sb_audio_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginHorizontal="@dimen/dp_15" />
+
+            </com.hjq.widget.layout.SettingBar>
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/sb_chat_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_leftText="@string/chat_bg"
+                app:bar_rightDrawable="@drawable/arrows_right_ic"
+                tools:bar_rightHint="@string/setting_language_simple" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/sb_blacklist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_leftText="@string/mobile_blocked_list"
+                app:bar_rightDrawable="@drawable/arrows_right_ic"
+                tools:bar_rightHint="@string/setting_language_simple" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/sb_backup_db"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:bar_leftText="@string/backup_chat_history"
+                app:bar_rightDrawable="@drawable/arrows_right_ic"
+                tools:bar_rightHint="@string/setting_language_simple" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

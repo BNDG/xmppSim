@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CameraLibrary</string>
+    <string name="error_saving_img">图片保存出错!</string>
+    <string name="recording_too_short">录制时间过短</string>
+    <string name="file_not_exist">文件不存在!</string>
+    <string name="click_long_press">单击拍照，长按摄像</string>
+    <string name="click_take_photo">单击拍照</string>
+    <string name="long_press_record">长按摄像</string>
+</resources>

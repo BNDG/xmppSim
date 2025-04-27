@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_bg_color"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout" />
+
+    <com.effective.android.panel.view.PanelSwitchLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:android11KeyboardFeature="true"
+        app:animationSpeed="standard">
+
+        <!-- 内容区域 -->
+        <!-- linear_edit_view 指定一个 EditText 用于输入 ，必须项-->
+        <!-- linear_auto_reset_enable 指定是否 LinearContentContainer 是否能够接受 Touch 事件自动隐藏面板-->
+        <!-- linear_auto_reset_area 指定是否 LinearContentContainer 只接受某个 View 区域的 Touch 事件来自定隐藏面板-->
+        <com.effective.android.panel.view.content.RelativeContentContainer
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:edit_view="@id/et_text_msg"
+            tools:layout_height="@dimen/dp_500">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pattern_6" />
+
+            <com.hjq.demo.chat.views.AutoHidePanelRecyclerView
+                android:id="@+id/rv_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bar_bottom"
+                android:scrollbars="none"
+                android:transcriptMode="normal" />
+
+            <include
+                android:id="@+id/ll_group_call"
+                layout="@layout/group_call"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:padding="@dimen/dp_6"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_unread_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_30"
+                android:background="@drawable/bg_round_left_unread"
+                android:drawableLeft="@drawable/icon_upup"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_8"
+                android:textColor="@color/primary_chat_user"
+                android:visibility="invisible"
+                tools:text="44th messages"
+                tools:visibility="visible" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/scroll_to_bottom_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/bar_bottom"
+                android:layout_alignBottom="@+id/messages_view"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/icon_to_bottom"
+                android:visibility="invisible"
+                app:backgroundTint="@color/white"
+                app:fabSize="mini"
+                app:shapeAppearanceOverlay="@style/RoundedStyle"
+                app:useCompatPadding="true"
+                tools:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/bar_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:background="#C0C0C0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/chat_bottom_panel"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/dp_50"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp_4">
+
+                    <Button
+                        android:id="@+id/btn_set_mode_voice"
+                        android:layout_width="28dip"
+                        android:layout_height="28dip"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:background="@drawable/selector_voice_btn"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_press_to_speak"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:layout_marginBottom="@dimen/dp_6"
+                        android:layout_weight="1"
+                        android:background="@drawable/chat_press_to_speak"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <com.hjq.demo.chat.voice.RecordButton
+                            android:id="@+id/btnAudio"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="按住说话"
+                            android:textSize="@dimen/sp_13"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_text_msg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:layout_weight="1"
+                        android:gravity="bottom">
+
+                        <EditText
+                            android:id="@+id/et_text_msg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_chat_et"
+                            android:maxLines="4"
+                            android:minHeight="@dimen/dp_36"
+                            android:paddingLeft="@dimen/dp_8"
+                            android:paddingTop="@dimen/dp_3"
+                            android:paddingRight="@dimen/dp_0_5"
+                            android:paddingBottom="@dimen/dp_3"
+                            android:textCursorDrawable="@drawable/cursor_chat_et"
+                            android:textSize="@dimen/sp_15" />
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_emoji_control"
+                        android:layout_width="28dip"
+                        android:layout_height="28dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical|right"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/selector_emotion_btn"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/btn_more_send"
+                        android:layout_width="28dip"
+                        android:layout_height="28dip"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/icon_chat_add" />
+
+                    <Button
+                        android:id="@+id/btn_send"
+                        android:layout_width="@dimen/dp_52"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:background="@drawable/btn_save"
+                        android:onClick="onClick"
+                        android:text="@string/send"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/sp_13"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_conversation_unavailable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/bar_bottom"
+                android:layout_alignParentBottom="true"
+                android:background="@color/chat_bg_color"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#C0C0C0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_reason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/icon_warning"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:gravity="center"
+                    android:text="@string/conversation_unavailable_group"
+                    android:textColor="@color/text_gray_color" />
+            </LinearLayout>
+
+        </com.effective.android.panel.view.content.RelativeContentContainer>
+
+        <!-- 面板区域，仅能包含PanelView-->
+        <com.effective.android.panel.view.panel.PanelContainer
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/chat_bg_color"
+            tools:layout_height="0dp"
+            tools:layout_weight="1">
+            <!-- 每一项面板 -->
+            <!-- panel_layout 用于指定面板该 ID 对应的布局 ，必须项-->
+            <!-- panel_trigger 用于用户点击该 ID 对应的 View 时切换到该面板 -->
+            <!-- panel_toggle  用于当该面板显示时 ，用户再次点击 panel_trigger 对应的 View 时是否回切输入法-->
+            <com.effective.android.panel.view.panel.PanelView
+                android:id="@+id/panel_emotion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:panel_layout="@layout/layout_emoji_list"
+                app:panel_trigger="@id/iv_emoji_control" />
+
+            <com.effective.android.panel.view.panel.PanelView
+                android:id="@+id/panel_addition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:panel_layout="@layout/chat_more_plugin"
+                app:panel_trigger="@id/btn_more_send" />
+
+        </com.effective.android.panel.view.panel.PanelContainer>
+    </com.effective.android.panel.view.PanelSwitchLayout>
+
+</LinearLayout>

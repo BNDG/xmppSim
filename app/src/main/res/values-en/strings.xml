@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 通用的 -->
+    <string name="common_loading">loading…</string>
+
+    <string name="common_unknown_error">unknown error</string>
+
+    <string name="common_confirm">OK</string>
+    <string name="common_cancel">Cancel</string>
+
+    <string name="common_year">Year</string>
+    <string name="common_month">moon</string>
+    <string name="common_day">day</string>
+
+    <string name="common_hour">hour</string>
+    <string name="common_minute">point</string>
+    <string name="common_second">Second</string>
+
+    <string name="common_crash_hint">The application encountered a minor accident and is being restarted.</string>
+
+    <string name="common_network_error">The current network is unavailable, please check the network settings</string>
+
+    <string name="common_video_error_not_support">This video is not suitable for playback on this device</string>
+    <string name="common_video_error_unknown">This video cannot be played</string>
+    <string name="common_video_error_supplement">Error type: %d, error code: %d</string>
+
+    <string name="common_phone_input_hint">Please enter mobile phone number</string>
+    <string name="common_phone_input_error">Mobile phone number entered incorrectly</string>
+
+    <string name="common_password_input_error">Please enter password</string>
+    <string name="common_password_input_unlike">The two password inputs are inconsistent, please re-enter.</string>
+
+    <string name="common_code_input_hint">Please enter the verification code</string>
+    <string name="common_code_send">Send verification code</string>
+    <string name="common_code_send_hint">Verification code has been sent, please check it carefully</string>
+    <string name="common_code_error_hint">Verification code error, please check your input</string>
+
+    <string name="common_step_next">Next step</string>
+    <string name="common_step_complete">Finish</string>
+
+    <string name="common_permission_alert">Authorization reminder</string>
+    <string name="common_permission_fail_1">Authorization failed, please grant permission correctly</string>
+    <string name="common_permission_fail_2">Failed to obtain permission, please grant permission manually</string>
+    <string name="common_permission_fail_3">Failed to obtain permission, please grant %s manually</string>
+    <string name="common_permission_fail_4">Background positioning permission is not granted, please select \"Always allow\"</string>
+    <string name="common_permission_goto">Go to Authorization</string>
+
+    <string name="common_permission_calendar">Calendar permissions</string>
+    <string name="common_permission_camera">Camera permissions</string>
+    <string name="common_permission_contacts">Address book permissions</string>
+    <string name="common_permission_location">Location permissions</string>
+    <string name="common_permission_location_background">Background positioning permissions</string>
+    <string name="common_permission_microphone">Microphone permissions</string>
+    <string name="common_permission_phone">Phone permissions</string>
+    <string name="common_permission_call_log">Call record permissions</string>
+    <string name="common_permission_sensors">Body sensor permissions</string>
+    <string name="common_permission_activity_recognition">Fitness permission</string>
+    <string name="common_permission_sms">SMS permissions</string>
+    <string name="common_permission_storage">Storage permissions</string>
+
+    <string name="common_permission_install">Install app permissions</string>
+    <string name="common_permission_notification">Notification bar permissions</string>
+    <string name="common_permission_window">Floating window permissions</string>
+    <string name="common_permission_setting">System settings permissions</string>
+
+    <string name="common_network_hint">There is currently no network connection, please check the network settings</string>
+    <string name="common_no_more_data">No more data</string>
+
+    <string name="common_web_ssl_error_title">The current website security certificate has expired or is untrustworthy\nDo you want to continue browsing\?</string>
+    <string name="common_web_ssl_error_allow">Continue browsing</string>
+    <string name="common_web_ssl_error_reject">Return to previous page</string>
+
+    <string name="common_web_location_permission_title">The current website needs to obtain your geographical location</string>
+    <string name="common_web_location_permission_allow">Grant</string>
+    <string name="common_web_location_permission_reject">reject</string>
+
+    <string name="common_web_call_phone_title">Current number %s</string>
+    <string name="common_web_call_phone_allow">dial</string>
+    <string name="common_web_call_phone_reject">Cancel</string>
+
+    <!-- 网络请求 -->
+
+    <string name="http_token_error">Login failed, please log in again</string>
+    <string name="http_data_explain_error">Data parsing exception, please wait.</string>
+    <string name="http_server_out_time">Server request timed out, please try again later</string>
+    <string name="http_network_error">Request failed, please check network settings</string>
+    <string name="http_response_error">The server responded abnormally, please try again later. Response code: %d, response information: %s</string>
+    <string name="http_server_error">Server connection abnormality, please try again later</string>
+    <string name="http_request_cancel">The request was interrupted, please try again</string>
+
+    <!-- 状态布局 -->
+    <string name="status_layout_no_data">Empty</string>
+    <string name="status_layout_error_request">Request error, please try again</string>
+    <string name="status_layout_error_network">Network error, please try again</string>
+    <string name="status_layout_retry">Try again</string>
+
+    <!-- 地区对话框 -->
+    <string name="address_title">Please select a region</string>
+    <string name="address_hint">Please select</string>
+
+    <!-- 日期对话框 -->
+    <string name="date_title">Please select a date</string>
+
+    <!-- 时间对话框 -->
+    <string name="time_title">Please select a time</string>
+
+    <!-- 升级对话框 -->
+    <string name="update_title">new version found</string>
+
+    <string name="update_content">Update content</string>
+
+    <string name="update_no">See you next time</string>
+    <string name="update_yes">Update now</string>
+
+    <string name="update_status_start">Downloading</string>
+    <string name="update_status_running">Downloading %d%%</string>
+    <string name="update_status_successful">Download is complete, click to install</string>
+    <string name="update_status_failed">Download failed, click to try again</string>
+
+    <string name="update_no_update">Currently the latest version</string>
+
+    <string name="update_notification_channel_id">update</string>
+    <string name="update_notification_channel_name">Upgrade notification</string>
+
+    <!-- 分享对话框 -->
+    <string name="share_title">Share to…</string>
+
+    <string name="share_platform_wechat">WeChat</string>
+    <string name="share_platform_moment">Moments</string>
+    <string name="share_platform_qq">QQ</string>
+    <string name="share_platform_qzone">QQ space</string>
+    <string name="share_platform_link">Copy link</string>
+
+    <string name="share_platform_copy_hint">Copied to clipboard</string>
+
+    <!-- 支付密码对话框 -->
+    <string name="pay_title">Please enter payment password</string>
+
+    <!-- 选择对话框 -->
+    <string name="select_min_hint">At least %d items must be selected</string>
+    <string name="select_max_hint">At most %d items can be selected</string>
+
+    <!-- 身份校验对话框 -->
+    <string name="safe_title">Identity verification</string>
+
+    <!-- 首页 -->
+    <string name="home_exit_hint">Press again to exit</string>
+    <string name="home_nav_index">front page</string>
+    <string name="home_nav_found">Discover</string>
+    <string name="home_nav_message">information</string>
+    <string name="home_nav_me">mine</string>
+
+    <!-- 登录 -->
+    <string name="login_register">register</string>
+    <string name="login_forget">forget the password\?</string>
+    <string name="login_text">Log in</string>
+
+    <string name="login_other">Other login methods</string>
+
+    <!-- 注册 -->
+    <string name="register_title">register</string>
+    <string name="register_password_hint1">Set a 6–18 digit login password</string>
+    <string name="register_password_hint2">Please enter your password again</string>
+
+
+    <string name="setting_language_switchover">language switch</string>
+    <string name="setting_language_simple">Simplified Chinese</string>
+    <string name="setting_language_complex">Traditional Chinese</string>
+    <string name="setting_update">Check for updates</string>
+
+    <string name="setting_password">Change password</string>
+    <string name="setting_phone">Modify mobile phone</string>
+
+    <string name="setting_auto">Automatic login</string>
+    <string name="setting_cache">Cache cleaning</string>
+
+    <string name="setting_agreement">privacy agreement</string>
+    <string name="setting_about">about Us</string>
+
+    <string name="setting_exit">Log out</string>
+
+    <!-- 关于 -->
+    <string name="about_title">about Us</string>
+    <string name="about_author"><font color="#85b84f">Android</font>Brother Wheel</string>
+
+    <string name="about_copyright">Copyright © 2018 – 2021</string>
+
+    <!-- 忘记密码 -->
+    <string name="password_forget_title">forget the password</string>
+
+    <!-- 重置密码 -->
+    <string name="password_reset_title">Set login password</string>
+    <string name="password_reset_phone_hint1">Set a 6–18 digit login password</string>
+    <string name="password_reset_phone_hint2">Re-enter password</string>
+    <string name="password_reset_success">Modification successful</string>
+
+    <!-- 修改手机号 -->
+    <string name="phone_reset_title">Set mobile number</string>
+    <string name="phone_reset_change_hint">Please use your new mobile phone number to log in next time.</string>
+    <string name="phone_reset_commit">Bind now</string>
+
+    <string name="phone_reset_commit_succeed">Binding successful</string>
+
+    <!-- 个人资料 -->
+    <string name="personal_data_title">personal data</string>
+    <string name="personal_data_head">avatar</string>
+
+    <string name="personal_data_id">User ID</string>
+    <string name="personal_data_name">Nick name</string>
+    <string name="personal_data_name_hint">Set nickname</string>
+
+    <string name="personal_data_address">area</string>
+    <string name="personal_data_address_hint">Please select</string>
+
+    <!-- 浏览器 -->
+    <string name="web_title">The page is loading...</string>
+
+    <!-- 图片选择 -->
+    <string name="image_select_title">Picture selection</string>
+    <string name="image_select_all">All pictures</string>
+
+    <string name="image_select_total">Total %d photos</string>
+
+    <string name="image_select_max_hint">Only %d pictures can be selected at most this time</string>
+
+    <string name="image_select_error">Unable to select, the image has been deleted</string>
+
+    <!-- 裁剪图片 -->
+    <string name="image_crop_error_not_support">Cropping failed. The current phone does not support cropping pictures.</string>
+
+    <!-- 视频选择 -->
+    <string name="video_select_title">Video selection</string>
+    <string name="video_select_all">All videos</string>
+
+    <string name="video_select_total">Total %d</string>
+
+    <string name="video_select_max_hint">At most %d videos can be selected this time</string>
+
+    <string name="video_select_error">Unable to select, the video has been deleted</string>
+
+    <!-- 拍照和拍摄 -->
+    <string name="camera_launch_fail">Unable to start camera</string>
+    <string name="camera_image_error">Wrong destination address</string>
+
+    <!--\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- 来自于chat\-\-\-\-\-\-\-\-\\-\-\-\-\-\-\-\-->
+    <string name="app_name">kptx</string>
+
+    <string name="tab_chats">kptx</string>
+    <string name="tab_discover">Discover</string>
+    <string name="tab_me">Me</string>
+
+    <string name="official_accounts">Public account</string>
+
+    <string name="enter_mobile_number">Mobile number</string>
+    <string name="enter_wechat_password">Password</string>
+    <string name="enter_verification_code">Verification code</string>
+    <string name="next">Next step</string>
+    <string name="verification_code">SMS Code</string>
+    <string name="get_verification_code">Get SMS</string>
+    <string name="login_hint_phone">your mobile number</string>
+    <string name="login_hint_account">your username</string>
+    <string name="login_hint_password">Enter password</string>
+    <string name="account">Account</string>
+    <string name="login">Log in</string>
+
+    <string name="user_settings">Settings</string>
+    <string name="share_contact">Share Contact</string>
+    <string name="add_star">Add Star</string>
+    <string name="block_contact">Block</string>
+    <string name="report">Report</string>
+    <string name="send_message">Send Message</string>
+    <string name="delete">Delete</string>
+
+    <string name="login_via_mobile_number">Mobile phone number login</string>
+    <string name="use_mobile_number_to_login">Log in with mobile phone number</string>
+    <string name="login_via_wechat_id_email_qq_id">Log in</string>
+    <string name="use_wechat_id_email_qq_id_to_login">Username login</string>
+    <string name="login_via_password">Log in with password</string>
+    <string name="login_via_sms_verification_code">Log in with SMS verification code</string>
+    <string name="logging_in">Login...</string>
+    <string name="enter_your_password">Password cannot be empty, please enter password</string>
+    <string name="enter_your_verification_code">Verification code cannot be empty</string>
+    <string name="login_error">Login failed</string>
+    <string name="registering">Registering...</string>
+    <string name="register">Sign Up</string>
+    <string name="register_hint">No account\? Register </string>
+    <string name="nick_name">Nick name</string>
+    <string name="nick_name_label">Nick name: %s</string>
+    <string name="nick_name_example">your nickname</string>
+    <string name="password">password</string>
+    <string name="save">Done</string>
+    <string name="edit">edit</string>
+    <string name="intro">Function introduction</string>
+    <string name="file_transfer_intro">Log in to the PC version of kptx and send me a message. You can transfer text, pictures, audio, video and other files between your mobile phone and computer.</string>
+
+    <string name="password_rules">The password must be a combination of 8-16 numbers and characters (cannot be pure numbers)</string>
+    <string name="send">Send</string>
+    <string name="sending">Sending...</string>
+    <string name="copy">copy</string>
+    <string name="forward">forward</string>
+    <string name="confirm">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="tips"></string>
+    <string name="recording_video">Record video</string>
+
+    <string name="go_setting">Go to settings</string>
+    <!--    个人资料-->
+    <string name="avatar">Profile Photo</string>
+    <string name="wx_id">Account: %s</string>
+    <string name="wechat_id">Account: </string>
+    <string name="qr_code">My QR Code</string>
+    <string name="scan_qr_code_and_add_friends">Scan the QR code to add friends</string>
+    <string name="sex">Gender</string>
+    <string name="region">Area</string>
+    <string name="whats_up">What\'s up</string>
+    <string name="from">From</string>
+    <string name="account_label">Account: %s</string>
+
+    <string name="saving">Saving</string>
+    <string name="wx_id_or_phone">Username/Mobile phone number</string>
+    <!--    tab title                            -->
+    <string name="new_friends">New Friends</string>
+    <string name="tab_contacts">Contacts</string>
+    <string name="group_chats">Group Chats</string>
+    <string name="settings">Settings</string>
+    <string name="account_security">Account Security</string>
+    <string name="chat_info">Chat Info</string>
+    <string name="personal_info">My Profile</string>
+    <string name="edit_name">Edit Name</string>
+    <!--    聊天信息页-->
+    <string name="set_chat_to_top">Sticky on Top</string>
+    <string name="block_chat_msg">Mute Notifications</string>
+    <string name="clear_chat_msg">Clear Chat History</string>
+
+    <string name="sex_male">male</string>
+    <string name="sex_female">female</string>
+
+    <string name="searching_for_user">Looking for contact...</string>
+
+    <string name="connect_to_server_error">Not connected to the server, check the network and click Retry.</string>
+    <string name="add_to_home_screen">add to desktop</string>
+    <string name="please_wait">Please wait...</string>
+
+    <string name="edit_contact">Remark</string>
+    <string name="complete">Done</string>
+    <string name="remark_name">Remark name</string>
+    <string name="tag">Label</string>
+    <string name="phone_num">Mobile</string>
+    <string name="add_phone_num">Add phone number</string>
+    <string name="description">describe</string>
+    <string name="add_description">Add more notes</string>
+
+    <string name="search_friend_by_phone">Search from mobile phone number</string>
+    <string name="search_friend_by_wx_id">Search from CXJ Account</string>
+    <string name="search_friend_by_people_nearby">people from nearby</string>
+    <string name="search_friend_by_contact">From mobile phone address book</string>
+
+    <string name="more">More</string>
+    <string name="more_info">More info</string>
+
+    <!--  permission  -->
+    <string name="request_permission">Permission settings</string>
+    <string name="request_permission_location">Enable location information permission in Settings-Application-kptx-Permissions to use location sharing, search and other functions normally.</string>
+    <string name="request_permission_camera">Enable camera permissions in Settings-Applications-kptx-Permissions to use functions such as taking photos and scanning normally.</string>
+    <string name="request_permission_storage">In order to ensure that the received pictures, videos and other contents can be browsed normally, kptx needs to apply for mobile phone storage permission.</string>
+    <string name="request_permission_record_audio">Turn on the microphone permission in Settings-Application-kptx-Permissions to use voice, video and other functions normally.</string>
+    <string name="request_permission_contacts">Enable the address book permission in Settings-Application-kptx-Permissions to use the contact search function normally.</string>
+
+    <string name="moments">work</string>
+    <string name="scan">Scan</string>
+    <string name="shake">shake</string>
+    <string name="people_nearby">people nearby</string>
+    <string name="shopping">Shopping</string>
+    <string name="game">game</string>
+    <string name="mini_programs">Mini program</string>
+    <string name="top_stories">take a look</string>
+    <string name="discover_search">Search</string>
+
+    <string name="open_people_nearby_tips">The People Viewing Attachments function will obtain your location information, and your location information will be retained for a period of time. Location information can be cleared manually at any time through the clear function in the upper right corner of the list.</string>
+    <!--    设置页-->
+    <string name="setting_title">Settings</string>
+    <string name="notifications">New message reminder</string>
+    <string name="do_not_disturb">do not disturb mode</string>
+    <string name="chats">Chats</string>
+    <string name="privacy">privacy</string>
+    <string name="general">General</string>
+    <string name="about">About</string>
+    <string name="help_feedback">Help &amp; Feedback</string>
+    <string name="wechat_services">plug-in</string>
+    <string name="switch_account">Switch account</string>
+
+    <string name="phone">Phone</string>
+    <string name="voice_print">sound lock</string>
+    <string name="emergency_contacts">emergency contact</string>
+    <string name="wechat_security_center">Cheng Xinju Security Center</string>
+    <string name="wechat_security_center_tips">If you encounter problems such as kptx being stolen and being unable to log in to your device, you can go to the Security Center</string>
+
+    <string name="set_gender">Set gender</string>
+
+    <string name="add_contacts">Add Contacts</string>
+    <string name="wechat_id_or_mobile">Username/Mobile phone number</string>
+
+    <string name="modify_password">Change password</string>
+    <string name="modify_password_rule">The password must be a combination of 8-16 numbers and characters (cannot be pure numbers)</string>
+    <string name="old_password">Old password</string>
+    <string name="old_password_hint">Enter old password</string>
+    <string name="new_password">New Password</string>
+    <string name="new_password_hint">Enter new password</string>
+    <string name="confirm_password">Confirm Password</string>
+
+    <string name="old_password_empty">The original password cannot be empty</string>
+    <string name="new_password_empty">New password cannot be empty</string>
+    <string name="confirm_password_empty">Confirm password cannot be empty</string>
+    <string name="confirm_password_incorrect">Two passwords are inconsistent</string>
+    <string name="modify_password_success_tips">The password is set successfully. You can log in to kptx through your mobile number + password in the future.</string>
+
+    <string name="mobile_contacts">View phone address book</string>
+    <string name="change_mobile">Change mobile number</string>
+
+    <string name="make_call">call</string>
+    <string name="voice_or_video_call">Audio and video calls</string>
+
+    <string name="mobile_blocked_list">Contacts Blacklist</string>
+    <string name="we_run">Cheng Information Movement</string>
+    <string name="channels">Video number</string>
+    <string name="chats_only">Chats Only</string>
+    <string name="privacy_manage">Permission management</string>
+    <string name="authorizations">Authorization management</string>
+    <string name="methods_for_friend_me">add my way</string>
+    <string name="find_mobile_contacts">Recommend contacts to me</string>
+    <string name="find_mobile_contacts_tips">After turning it on, it will recommend you mobile phone contacts who have opened Cheng Xinju.</string>
+    <string name="require_friend_request">Verification is required when adding me as a friend</string>
+
+    <string name="blocked_contact_tips">has been added to the blacklist, you will no longer receive messages from the other party</string>
+
+    <string name="show_more">full text</string>
+    <string name="show_less">close</string>
+    <!--    聊天底部功能-->
+    <string name="album">Album</string>
+    <string name="video_call">Video Call</string>
+    <string name="file">Files</string>
+    <string name="voice_call">Voice Call</string>
+    <string name="battery_optimization_disable_dialog_title">Battery optimization</string>
+    <string name="battery_optimization_disable_dialog_message">Your device has done some heavy battery optimizations for kptx, which may cause delays in notifications or even lost messages. \n\nDo you want to use kptx’s energy-saving optimization\?</string>
+    <string name="user_not_found">Unable to find user</string>
+    <string name="mute">mute</string>
+    <string name="Hands_free">hands-free</string>
+    <string name="change_voice">Convert audio</string>
+    <string name="hang_up">hang up</string>
+    <string name="negative_duration">%1$s</string>
+    <string name="switch_camera">Switch camera</string>
+    <string name="answer">Answer</string>
+    <string name="waiting_for_accept">Waiting for the other party to answer</string>
+    <string name="end_call">call ended</string>
+    <string name="accept_call">Agree to call</string>
+    <string name="sent_refuse_call">Rejected</string>
+    <string name="received_refuse_call">The other party has rejected</string>
+    <string name="received_busy_call">The other party is busy</string>
+    <string name="received_cancel_call">The other party has canceled</string>
+    <string name="sent_busy_call">Busy</string>
+    <string name="sent_cancel_call">Canceled</string>
+    <string name="nobody_answer">No response from the other party</string>
+    <string name="group_manager">Group management</string>
+    <string name="group_transfer_ownership">Transfer of group owner management rights</string>
+    <string name="already_copy">Copied</string>
+    <string name="received_room_invite">\"%s\" invited you to join the group chat</string>
+    <string name="search_chat_msg">Search Chat History</string>
+    <string name="connection_normally">The connection is normal</string>
+    <string name="connection_closed">Lost connection</string>
+    <!--    默认顶部群聊title-->
+    <string name="normal_group_name">Group Chat</string>
+    <string name="select_all">Select all</string>
+    <string name="unnamed">Unnamed</string>
+    <string name="share">share</string>
+    <string name="latest_chats">recent chat</string>
+    <string name="create_new_chat">Create new chat</string>
+    <string name="send_to">Send to:</string>
+    <string name="select_chat">Choose a chat</string>
+    <string name="creating_group">Creating group chat...</string>
+    <string name="adding_member">Adding contact...</string>
+    <string name="chat_members">chat members</string>
+    <string name="http_response_null_body">The server data returned an exception, please try again later.</string>
+    <string name="http_response_md5_error">Download failed, file md5 verification failed</string>
+    <string name="account_register">Sign up via Account</string>
+    <string name="phone_register">Sign up by phone number</string>
+    <string name="conversation_unavailable_group">Unable to send messages in a group chat that has been logged out</string>
+    <string name="only_admin_permission">Requires administrator rights</string>
+    <string name="create_group">Start a group chat</string>
+    <string name="kicked_from_group">You have been removed from the group chat</string>
+    <string name="scan_result">Scan code results</string>
+    <string name="open_url_by_browser">Go to your browser and open the link\?</string>
+    <string name="join">join in</string>
+    <string name="group_calling">Group call in progress</string>
+    <string name="created_voice_call">%s initiated a voice call</string>
+    <string name="created_video_call">%s initiated a video call</string>
+    <string name="group_call_end">The call has ended</string>
+    <string name="contacts_count_str">%d friends</string>
+    <string name="start_chat_message">I passed your friend verification request and now we can start chatting</string>
+    <string name="auto_start_setting">Autostart settings</string>
+    <string name="power_manager_setting">Background power consumption settings</string>
+    <string name="battery_manager_setting">Battery optimization settings</string>
+    <string name="chat_team_ait_all">everyone</string>
+    <string name="chat_message_ait_contact_title">Select reminder</string>
+    <string name="security">Security Center</string>
+    <string name="verification_msg">New Friends</string>
+    <string name="my_group_chats">Group Chats</string>
+    <string name="pinned_this_chat">Sticky on Top</string>
+    <string name="delete_this_chat">Delete this chat</string>
+    <string name="add_friends">Add Contacts</string>
+    <string name="theme">theme</string>
+    <string name="confirm_delete">Are you sure to delete\?</string>
+    <string name="add_to_contact">Add to contacts</string>
+    <string name="help_center">Help Center</string>
+    <string name="file_management">File Management</string>
+    <string name="chat_setting">Chat settings</string>
+    <string name="audio_speakerphone">Listener plays voice</string>
+    <string name="notification_setting">Notification settings</string>
+    <string name="notification_management">Notification management</string>
+    <string name="message_setting">Message settings</string>
+    <string name="chat_bg">Chat background</string>
+    <string name="common_only_copy">Copy only</string>
+    <string name="downloading">Downloading...</string>
+    <string name="chat_message_file_size_limit_tips">The current file size exceeds the %sM sending limit, please select again.</string>
+    <string name="file_open_failed">Open failed, file may have been moved or deleted.</string>
+    <string name="choose_open">Choose how to open</string>
+    <string name="send_file_failed">Failed to send file</string>
+    <string name="join_group">Join group chat</string>
+    <string name="cancel_pinned_this_chat">Unpin</string>
+    <string name="show_all_members">View all members</string>
+    <string name="conversation_ait_tip">[Someone\@me]</string>
+    <string name="channel_discover">discovery channel</string>
+    <string name="group_destroyed">Group chat has been dismissed</string>
+    <string name="multi_languages">Language</string>
+    <string name="follow_system">Auto</string>
+    <string name="simplified_chinese">简体中文</string>
+    <string name="english">English</string>
+    <string name="scan_add_contact">Scan contact\'s QR code</string>
+    <!--    群资料页面-->
+    <string name="group_name">Group Name</string>
+    <string name="group_info">Group Info</string>
+    <string name="manage_group">Manage Group</string>
+    <string name="mute_notifications">Mute Notifications</string>
+    <string name="leave_room">Leave</string>
+    <string name="disband_group">Disband Group</string>
+    <string name="search">Search</string>
+    <string name="confirm_mobile">Confirm mobile number</string>
+    <string name="send_sms">We will send a verification code to this number</string>
+    <string name="send_sms_tick">%d seconds later...</string>
+    <string name="send_friend_request">Send Friend Request</string>
+    <string name="set_alias">Set Alias</string>
+    <string name="set_privacy">Set Privacy</string>
+    <string name="chats_more_privacy">Chats, Moments</string>
+    <!--    聊天时间显示-->
+    <string name="sunday">Sun</string>
+    <string name="monday">Mon</string>
+    <string name="tuesday">Tue</string>
+    <string name="wednesday">Wed</string>
+    <string name="thursday">Thu</string>
+    <string name="friday">Fri</string>
+    <string name="saturday">Sat</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="midnight">Midnight</string>
+    <string name="morning">AM</string>
+    <string name="noon">Noon</string>
+    <string name="afternoon">PM</string>
+    <string name="evening">PM</string>
+    <string name="enter_password">Enter password</string>
+    <string name="enter_account">Enter Account</string>
+    <string name="camera">Camera</string>
+    <string name="forgot_old_password">Forgot old password?</string>
+    <string name="select_jitsi">Select jitsi server</string>
+    <string name="discover_channel">Discovery Channel</string>
+    <string name="done_contacts">Done(%d)</string>
+    <string name="done">Done</string>
+    <string name="release_to_cancel">Release to cancel</string>
+    <string name="release_to_send">Release to send</string>
+    <string name="hold_to_talk">Hold to Talk</string>
+    <string name="i_am">I\'m </string>
+    <string name="message_too_short">Message too short</string>
+    <string name="from_search_account">Searched ID</string>
+    <string name="not_be_found_group">The group could not be found</string>
+    <string name="end_record_tip">The recording will end in %d second.</string>
+    <string name="Block">Block</string>
+    <string name="block_content">When you block this user, you will not receive any messages from them.</string>
+    <string name="delete_contacts">Delete Contact</string>
+    <string name="delete_contact_tips">Delete contact \"%s\" and the chat history with that contact"</string>
+    <string name="sure_to_quit">Are you sure to quit?</string>
+    <string name="join_group_tips">Do you want to join [%1$s]?</string>
+    <string name="notification_detected_prompt">It is detected that the notification permission is not enabled. Do you want to go to settings to enable it?</string>
+    <string name="team">%sTeam</string>
+    <string name="welcome_back_to">Welcome back to %s! Feel free to tell me if you have any problems or suggestions.\n \n</string>
+    <string name="ensure_setting_hit">To ensure that you receive messages in a timely manner, please check the app settings as follows: \n</string>
+    <string name="enable_auto_start">1. Enable the app\'s auto-start permission. #Go to settings action::go_auto_start# \n</string>
+    <string name="add_app_to_whitelist">2. Add the APP to the one-click cleanup whitelist (i.e. lock the APP).\n</string>
+    <string name="enable_power_manager">3. On the battery management page, allow APP to consume power in the background. #Go to settings action::go_power_manager#</string>
+    <string name="whats_fresh">What\'s Fresh</string>
+    <string name="check_for_updates">Check for Updates</string>
+    <string name="license_and_service">《Agreement on Software License and Service of kptx》</string>
+    <string name="privacy_policy_summary">《Privacy Policy SummaryPrivacy Policy》</string>
+    <string name="shared_groups">Shared Groups</string>
+    <string name="not_open">Not available yet</string>
+    <string name="my_collection">My Collection</string>
+    <string name="received">I Received</string>
+    <string name="sent">I Sent</string>
+    <string name="unread_tips">%d unread message</string>
+    <string name="view_speech_record">View Speech Record</string>
+    <string name="group_chat_invite_msg">You invited %s to join the group chat</string>
+    <string name="delete_group_chat_history">Are you sure you want to delete the group chat history?</string>
+    <string name="leave_group_chat">Leaving group chat and clear chat history?</string>
+    <string name="confirm_phone">Confirm mobile number</string>
+    <string name="will_send_sms">We will send a verification code to: </string>
+    <string name="disband_group_chat">After disbanding, all members will be removed from the group</string>
+    <string name="deletion_chat_history_with">Confirm deletion of the chat history with %s</string>
+    <string name="sented">Sented</string>
+    <string name="permissions_obtained_some">Some permissions were obtained successfully, but some permissions were not granted normally.</string>
+    <string name="permanently_denied">Authorization is permanently denied, please grant permission manually</string>
+    <string name="failed_permission">Failed to obtain permission</string>
+    <string name="choose_file">Choose file</string>
+    <string name="no_permission">No permission</string>
+    <string name="copied">Copied</string>
+    <string name="sent_failed">Send failed</string>
+    <string name="failed">Failed</string>
+    <string name="to_join_group_call">The current group call is in progress. Do you want to join it?</string>
+    <string name="uploading">Uploading</string>
+    <string name="success">Success</string>
+    <string name="already_followed">Already followed</string>
+    <string name="unfollowed">Unfollowed</string>
+    <string name="added">Added</string>
+    <string name="accept">Accept</string>
+    <string name="swipe_up_to_cancel">Swipe up to cancel send</string>
+    <string name="set_remarks">Set remarks</string>
+    <string name="reject">Reject</string>
+    <string name="search_label">Search:</string>
+    <string name="not_open_yet">Not open yet</string>
+    <string name="privacy_agreement_dialog">sample tips.\n\n sample tips %s sample tips.</string>
+    <string name="privacy_agreement_name">bing</string>
+    <string name="quote">Quote</string>
+    <string name="my_group_nick">My nickname in the group</string>
+    <string name="group_administrator">Group Administrator</string>
+    <string name="remove">Remove</string>
+    <string name="add_administrator">Adding Administrators</string>
+    <string name="remove_group_administrator">Are you sure you want to remove %s\'s administrator privileges?</string>
+    <string name="group_subject">Group Subject</string>
+    <string name="new_message_notification">New message notification</string>
+    <string name="connection_status">Connection Status</string>
+    <string name="call_invitation">Call invitation</string>
+    <string name="incoming_calls">Incoming calls</string>
+    <string name="notify_running_tips">%s is running in energy saving mode</string>
+    <string name="member_banned">%s was banned</string>
+    <string name="backup_chat_history">Back up chat history</string>
+    <string name="no_right_to_speak">No right to speak</string>
+    <string name="require_password">Require password</string>
+    <string name="only_owner_permission">Only the group owner can change</string>
+    <string name="group_avatar">Group Avatar</string>
+    <string name="mute_member">Mute</string>
+    <string name="cancel_mute">Cancel Mute</string>
+    <string name="recommend_contact"> I recommend %s [xmpp:%s] to you</string>
+    <string name="image">Picture</string>
+    <string name="voice">Voice</string>
+    <string name="call_msg">Call</string>
+    <string name="video">Video</string>
+    <string name="server">Server</string>
+    <string name="enter_server">Server address</string>
+    <string name="register_tips">If the server does not open client registration, please go to the corresponding platform to register</string>
+    <string name="xmpp_id">jack@yax.im</string>
+</resources>

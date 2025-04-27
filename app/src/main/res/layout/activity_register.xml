@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sub_page_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/top_back_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:onClick="back"
+            android:padding="@dimen/dp_10"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_close" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_12">
+
+        <LinearLayout
+            android:id="@+id/ll_register_type"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_register_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:text="@string/register"
+                android:textColor="@color/common_top_title"
+                android:textSize="@dimen/sp_22" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="@string/register_tips"
+                android:textColor="@color/common_hint_grey"
+                android:textSize="@dimen/sp_12" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_64">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/sdv_avatar"
+                android:layout_width="@dimen/dp_64"
+                android:layout_height="@dimen/dp_64"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_register" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_48"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:minEms="5"
+                android:text="@string/nick_name"
+                android:textColor="@color/common_text_color"
+                android:textSize="@dimen/common_item_text_size"
+                tools:text="昵称" />
+
+            <EditText
+                android:id="@+id/et_nick_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toLeftOf="@id/sdv_avatar"
+                android:layout_toRightOf="@+id/tv_nick_name"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/nick_name_example"
+                android:singleLine="true"
+                android:textColorHint="@color/common_hint_grey"
+                android:textSize="@dimen/common_item_text_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_alignParentBottom="true"
+                android:background="@color/divider_grey" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_account"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_account_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:minEms="5"
+                android:text="账号"
+                android:textColor="@color/common_text_color"
+                android:textSize="@dimen/common_item_text_size" />
+
+            <EditText
+                android:id="@+id/et_account"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_account_label"
+                android:background="@null"
+                android:hint="@string/login_hint_account"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColorHint="@color/common_hint_grey"
+                android:textSize="@dimen/common_item_text_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_alignParentBottom="true"
+                android:background="@color/divider_grey" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:minEms="5"
+                android:text="@string/password"
+                android:textColor="@color/common_text_color"
+                android:textSize="@dimen/common_item_text_size" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_password"
+                android:background="@null"
+                android:hint="@string/login_hint_password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColorHint="@color/common_hint_grey"
+                android:textSize="@dimen/common_item_text_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_alignParentBottom="true"
+                android:background="@color/divider_grey" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:minEms="5"
+                android:text="@string/server"
+                android:textColor="@color/common_text_color"
+                android:textSize="@dimen/common_item_text_size" />
+
+            <EditText
+                android:id="@+id/et_server"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_server"
+                android:background="@null"
+                android:hint="@string/enter_server"
+                android:singleLine="true"
+                android:textColorHint="@color/common_hint_grey"
+                android:textSize="@dimen/common_item_text_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_alignParentBottom="true"
+                android:background="@color/divider_grey" />
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/register_btn_bg_disable"
+            android:enabled="false"
+            android:paddingTop="@dimen/dp_7"
+            android:paddingBottom="@dimen/dp_7"
+            android:text="@string/register"
+            android:textColor="@color/register_btn_text_disable"
+            android:textSize="@dimen/common_item_text_size" />
+    </LinearLayout>
+</LinearLayout>

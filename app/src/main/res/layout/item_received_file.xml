@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/msg_padding_bottom">
+
+    <TextView
+        android:id="@+id/tv_timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_activity">
+
+        <ImageView
+            android:id="@+id/sdv_avatar"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:scaleType="fitXY"
+            android:src="@mipmap/default_user_avatar" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_8"
+            android:layout_toRightOf="@id/sdv_avatar"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_group_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_2"
+                android:textColor="@color/chat_nickname_text"
+                android:textSize="@dimen/chat_nickname_text_size"
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:text="libai13888888888" />
+
+            <com.hjq.demo.widget.ChatView xmlns:chat="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cv_file_content"
+                style="@style/chat_receive_bubble">
+
+                <ImageView
+                    android:id="@+id/iv_file_type"
+                    android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_unknown_file" />
+
+                <TextView
+                    android:id="@+id/tv_file_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@id/iv_file_type"
+                    android:ellipsize="middle"
+                    android:maxWidth="@dimen/dp_170"
+                    android:singleLine="true"
+                    android:textColor="@color/common_text_color"
+                    android:textSize="@dimen/sp_14"
+                    tools:text="达明一派-今夜星光灿烂.txt" />
+
+                <TextView
+                    android:id="@+id/tv_file_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_file_name"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:layout_toRightOf="@id/iv_file_type"
+                    android:textColor="@color/text_gray_color"
+                    android:textSize="@dimen/sp_10"
+                    tools:text="11.49KB" />
+
+                <FrameLayout
+                    android:id="@+id/file_progress_fl"
+                    android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:background="@drawable/bg_file_mask"
+                    android:visibility="invisible">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/progress_bar"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        app:indicatorColor="@color/color_white"
+                        app:indicatorSize="@dimen/dp_20"
+                        app:trackColor="@color/black30"
+                        app:trackCornerRadius="@dimen/dp_0_5"
+                        app:trackThickness="@dimen/dp_2"
+                        tools:progress="30" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/progress_bar_inside_icon"
+                        android:layout_width="@dimen/dp_6"
+                        android:layout_height="@dimen/dp_9"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_video_pause_thumb" />
+                </FrameLayout>
+            </com.hjq.demo.widget.ChatView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height" />
+
+    <!-- 显示扫码内容的TextView -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewScanResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:textSize="@dimen/sp_16"
+        android:autoLink="web"
+        android:textColorLink="#0888ff"
+        android:padding="@dimen/dp_20"
+        tools:text="abc adkfjalskdfjasldkfjalsdkfja;sldkfja;sldkfjasldkfwejlkjklwef"
+        app:layout_constraintTop_toBottomOf="@+id/layout_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

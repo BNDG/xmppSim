@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_tab_bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_58"
+            android:layout_height="@dimen/dp_58"
+            android:layout_marginTop="@dimen/dp_5">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/sdv_avatar"
+                android:layout_width="@dimen/dp_58"
+                android:layout_height="@dimen/dp_58"
+                android:src="@mipmap/default_user_avatar" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_affiliation"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_muc_owner"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_3"
+            android:gravity="center"
+            android:maxWidth="@dimen/dp_58"
+            android:padding="@dimen/dp_0_5"
+            android:singleLine="true"
+            android:textColor="@color/chat_subtitle_color"
+            android:textSize="@dimen/sp_12"
+            tools:text="张张三三" />
+    </LinearLayout>
+
+</LinearLayout>

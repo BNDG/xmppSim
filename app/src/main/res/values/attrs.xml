@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MomentsLikeListView">
+        <attr name="item_color" format="color" />
+        <attr name="item_selector_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandTextView">
+        <attr name="showLines" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="NineGridLayout">
+        <attr name="sapcing" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MaterialBadgeTextView">
+        <attr name="android:background" />
+        <attr name="mbtv_border_width" format="dimension" />
+        <attr name="mbtv_border_color" format="color" />
+        <attr name="mbtv_border_alpha" format="float" />
+        <attr name="mbtv_type" format="enum">
+            <enum name="shadow_gradual" value="1" />
+            <enum name="shadow_alpha" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="LQRRecyclerView">
+        <!--RecyclerView的类型-->
+        <attr name="rv_type" format="integer">
+            <enum name="grid" value="0" />
+            <enum name="stagger" value="1" />
+        </attr>
+
+        <!--RecyclerView的方向-->
+        <attr name="rv_orientation">
+            <enum name="vertical" value="0" />
+            <enum name="horizontal" value="1" />
+        </attr>
+
+        <!--网格或瀑布流的列数-->
+        <attr name="rv_column" format="integer" />
+
+        <!--下划线高度/宽度-->
+        <attr name="rv_divider_size" format="dimension" />
+        <!--下划线颜色-->
+        <attr name="rv_divider_color" format="color" />
+        <!--下划线图片-->
+        <attr name="rv_divider_drawable" format="reference" />
+
+        <!--是否开启默认动画-->
+        <attr name="rv_default_animator_open" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="RoundFrameLayout">
+
+        <attr name="corner_topRadius" format="dimension" />
+        <attr name="corner_bottomRadius" format="dimension" />
+        <attr name="corner_radius" format="dimension" />
+
+    </declare-styleable>
+    <!--语音消息的播放暂停-->
+    <declare-styleable name="CircleProgress">
+        <attr name="size" format="dimension" />
+        <attr name="progressWidth" format="dimension" />
+        <attr name="playColor" format="color" />
+        <attr name="shadowColor" format="color" />
+        <attr name="progressColor" format="color" />
+        <attr name="mProgress" format="integer" />
+        <attr name="maxProgress" format="integer" />
+        <attr name="stringSize" format="dimension" />
+        <attr name="border" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="chat">
+        <attr name="is_arrow_center" format="boolean"/>
+        <attr name="has_stroke" format="boolean"/>
+        <attr name="stroke_width" format="dimension"/>
+        <attr name="arrow_direction" format="string"/>
+        <attr name="arrow_up_distance" format="dimension"/>
+        <attr name="conner_radius" format="dimension"/>
+        <attr name="stroke_color" format="color"/>
+        <attr name="fill_color" format="color"/>
+        <attr name="press_stroke_color" format="color"/>
+        <attr name="press_fill_color" format="color"/>
+        <attr name="arrow_width" format="dimension"/>
+        <attr name="arrow_height" format="dimension"/>
+    </declare-styleable>
+</resources>

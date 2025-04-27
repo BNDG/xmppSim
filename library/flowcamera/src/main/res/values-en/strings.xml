@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CameraLibrary</string>
+    <string name="error_saving_img">Image saving error!</string>
+    <string name="recording_too_short">Recording time is too short</string>
+    <string name="file_not_exist">File does not exist!</string>
+    <string name="click_long_press">Click to take photo, long press to record video</string>
+    <string name="click_take_photo">Click to take a photo</string>
+    <string name="long_press_record">Long press to record</string>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_operation_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_55"
+    android:layout_marginBottom="@dimen/dp_6">
+
+    <ImageView
+        android:id="@+id/iv_file_type"
+        android:layout_width="@dimen/dp_45"
+        android:layout_height="@dimen/dp_45"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_7"
+        android:layout_marginRight="@dimen/dp_2"
+        android:scaleType="center" />
+
+    <TextView
+        android:id="@+id/tv_files_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_7"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_toRightOf="@+id/iv_file_type"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:textColor="@color/common_text_color"
+        android:textSize="@dimen/sp_13"
+        android:textStyle="bold"
+        tools:text="图片" />
+
+    <TextView
+        android:id="@+id/tv_files_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_files_title"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_toRightOf="@+id/iv_file_type"
+        android:textColor="@color/common_text_color"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textSize="@dimen/sp_13"
+        tools:text="今天" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_file_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_files_title"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_toRightOf="@+id/tv_files_date"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textColor="@color/text_gray_color"
+        android:textSize="@dimen/sp_13"
+        tools:text="51M" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_file_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_files_title"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_toRightOf="@+id/tv_file_size"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textColor="@color/text_gray_color"
+        android:textSize="@dimen/sp_13"
+        tools:text="来自xxx" />
+
+</RelativeLayout>

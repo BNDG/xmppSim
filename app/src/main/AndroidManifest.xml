@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 清单文件合并指引：https://developer.android.google.cn/studio/build/manifest-merge?hl=zh-cn -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hjq.demo">
+
+    <!-- 网络相关 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 外部存储 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
+
+    <!-- 拍照权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- 安装权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!-- 定位权限（用于 WebView 定位）-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--    ***************************************************************来自于chat权限-->
+    <!-- Required-->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <!--    忽略电池优化-->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <!-- 联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+<!--    允许应用程序修改音频设置，例如启用或禁用扬声器、调节音量等-->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- ***********************************chat meta data end***********************************-->
+    <!-- Application 节点详解：https://developer.android.google.cn/guide/topics/manifest/application-element -->
+    <!-- Activity 节点详解：https://developer.android.google.cn/guide/topics/manifest/activity-element -->
+    <application
+        android:name=".app.AppApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="${app_name}"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,LockedOrientationActivity"
+        tools:replace="android:allowBackup,android:supportsRtl, android:label"
+        tools:targetApi="n">
+
+        <!-- 表示当前已经适配了分区存储 -->
+        <meta-data
+            android:name="ScopedStorage"
+            android:value="true" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="9W2OdDPoxrTdrIERdSqTs9HDQHKAcKFP" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <!-- 适配 Android 7.0 文件意图 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+<!--        8.0 portrait主题需要添加windowIsTranslucent否则报错-->
+        <activity
+            android:name=".chat.activity.SplashActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SplashTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 闪屏页 -->
+        <activity
+            android:name=".ui.activity.DemoSplashActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SplashTheme"
+            android:exported="true">
+        </activity>
+
+        <!-- 引导页 -->
+        <activity
+            android:name=".ui.activity.GuideActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 首页 -->
+        <activity
+            android:name=".ui.activity.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true">
+        </activity>
+
+        <!-- 登录页 -->
+        <activity
+            android:name=".ui.activity.DemoLoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 注册页 -->
+        <activity
+            android:name=".ui.activity.DemoRegisterActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 崩溃展示（必须在独立进程） -->
+        <activity
+            android:name=".ui.activity.CrashActivity"
+            android:launchMode="singleTop"
+            android:process=":crash"
+            android:screenOrientation="landscape" />
+
+        <!-- 重启应用（必须在独立进程） -->
+        <activity
+            android:name=".ui.activity.RestartActivity"
+            android:launchMode="singleTop"
+            android:process=":restart" />
+
+        <!-- 设置页 -->
+        <activity
+            android:name=".ui.activity.DemoSettingActivity"
+            android:label="@string/setting_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 忘记密码 -->
+        <activity
+            android:name=".ui.activity.PasswordForgetActivity"
+            android:label="@string/password_forget_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 重置密码 -->
+        <activity
+            android:name=".ui.activity.PasswordResetActivity"
+            android:label="@string/password_reset_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 更换手机 -->
+        <activity
+            android:name=".ui.activity.PhoneResetActivity"
+            android:label="@string/phone_reset_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 关于我们 -->
+        <activity
+            android:name=".ui.activity.DemoAboutActivity"
+            android:label="@string/about_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 个人资料 -->
+        <activity
+            android:name=".ui.activity.PersonalDataActivity"
+            android:label="@string/personal_data_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 网页浏览 -->
+        <activity
+            android:name=".ui.activity.BrowserActivity"
+            android:label="@string/web_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 拍照选择 -->
+        <activity
+            android:name=".ui.activity.CameraActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 图片裁剪 -->
+        <activity
+            android:name=".ui.activity.ImageCropActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 图片选择 -->
+        <activity
+            android:name=".ui.activity.ImageSelectActivity"
+            android:label="@string/image_select_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 查看大图 -->
+        <activity
+            android:name=".ui.activity.ImagePreviewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 播放视频（自适应方向） -->
+        <activity
+            android:name=".ui.activity.VideoPlayActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/FullScreenTheme" />
+
+        <!-- 播放视频（竖屏方向） -->
+        <activity
+            android:name=".ui.activity.VideoPlayActivity$Portrait"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
+
+        <!-- 播放视频（横屏方向） -->
+        <activity
+            android:name=".ui.activity.VideoPlayActivity$Landscape"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreenTheme" />
+
+        <!-- 选择视频 -->
+        <activity
+            android:name=".ui.activity.VideoSelectActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 对话框案例 -->
+        <activity
+            android:name=".ui.activity.DialogActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 状态案例 -->
+        <activity
+            android:name=".ui.activity.StatusActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 微信回调（请注意这个 Activity 放置的包名要和当前项目的包名保持一致，否则将不能正常回调） -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!--*************************来自于chat**********************************************-->
+
+        <activity
+            android:name=".chat.activity.LoginActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+             />
+        <activity
+            android:name=".chat.activity.UserInfoActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+             />
+        <activity
+            android:name=".chat.activity.UserInfoMoreActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.UserInfoFileHelperActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.UserInfoMyActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.UserSettingActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.ChatActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".chat.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".chat.activity.SettingActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.AccountSecurityActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.PrivacyActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.BlockedContactActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.MyProfileActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.MyMoreProfileActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.EditNameActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.NewFriendsActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.AddFriendsBySearchActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.AddContactsActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.NewFriendsAcceptActivity"
+            android:screenOrientation="portrait"
+             />
+
+        <activity
+            android:name=".chat.activity.BigImageActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".chat.activity.ChatSingleSettingActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".chat.activity.ChatGroupSettingActivity"
+            android:screenOrientation="portrait"
+             />
+
+        <activity
+            android:name=".chat.activity.CreateGroupActivity"
+            android:screenOrientation="portrait"
+             />
+
+        <activity
+            android:name=".chat.activity.UpdateGroupNameActivity"
+            android:screenOrientation="portrait"
+             />
+
+        <activity
+            android:name=".chat.activity.SearchActivity"
+            android:screenOrientation="portrait"
+             />
+
+        <activity
+            android:name=".chat.activity.AboutActivity"
+            android:screenOrientation="portrait"
+             />
+
+        <activity
+            android:name=".chat.activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".chat.activity.MyQrCodeActivity"
+            android:screenOrientation="portrait"
+             />
+
+        <activity
+            android:name=".chat.activity.EditContactActivity"
+            android:screenOrientation="portrait"
+             />
+
+        <activity
+            android:name=".chat.activity.NewFriendsApplyConfirmActivity"
+            android:screenOrientation="portrait"
+             />
+
+        <activity
+            android:name=".chat.activity.NewFriendsAcceptConfirmActivity"
+            android:screenOrientation="portrait"
+             />
+
+
+        <activity
+            android:name=".chat.activity.ModifyPasswordActivity"
+            android:screenOrientation="portrait"
+             />
+
+        <activity android:name=".chat.activity.ConfigActivity" />
+        <activity android:name=".chat.activity.ChatGroupManagerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity android:name=".chat.activity.SelectConversationActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity android:name=".chat.activity.GroupMemberListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity android:name=".chat.activity.ConversationListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity android:name=".chat.activity.ScanResultActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity android:name=".chat.activity.CreateChatActivity" />
+        <activity android:name=".chat.activity.RecordVideoActivity" />
+        <activity android:name=".chat.activity.GeneralSettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity android:name=".chat.activity.ChatSettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".chat.activity.FileManagementActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".chat.activity.GroupInfoActivity" />
+        <activity android:name=".chat.activity.JoinGroupActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".chat.activity.SearchRecordActivity" />
+        <activity android:name=".chat.activity.GroupMemberAllActivity" />
+        <activity android:name=".chat.activity.ChannelDiscoverActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".chat.activity.MultiLanguagesActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".chat.activity.BlackListActivity" />
+        <activity android:name=".chat.activity.ChatGroupAdministratorsActivity" />
+        <activity android:name=".chat.activity.BackupDbActivity" />
+        <activity android:name=".chat.activity.VisualMediaActivity" />
+        <activity
+            android:name=".ui.activity.ImagePreviewMsgActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!--        前台保活-->
+        <service android:name=".chat.service.XmppForegroundService"  android:exported="false"
+            android:process=":smart">
+        </service>
+        <service android:name=".chat.service.UploadService" />
+        <service android:name=".chat.service.DownloadService" />
+
+        <receiver android:name=".chat.receiver.AnswerCallReceiver" />
+        <receiver android:name=".chat.receiver.DeclineCallReceiver" />
+<!-- +++++++++++++++++++++++++++++++++++++++chat end+++++++++++++++++++++++++++++++++++++++++-->
+    </application>
+
+    <!-- Android 11 软件包可见性适配：https://www.jianshu.com/p/d1ccd425c4ce -->
+    <queries>
+        <!-- 拍照意图：MediaStore.ACTION_IMAGE_CAPTURE -->
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+
+        <!-- 拍摄意图：MediaStore.ACTION_VIDEO_CAPTURE -->
+        <intent>
+            <action android:name="android.media.action.VIDEO_CAPTURE" />
+        </intent>
+
+        <!-- 图片裁剪意图 -->
+        <intent>
+            <action android:name="com.android.camera.action.CROP" />
+        </intent>
+
+        <!-- 打电话意图：Intent.ACTION_DIAL -->
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+        </intent>
+
+        <!-- 调起分享意图：Intent.ACTION_SEND -->
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+        </intent>
+
+        <!-- 调起其他页面意图：Intent.ACTION_VIEW -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+        </intent>
+
+        <!-- 调起系统文件选择器：Intent.ACTION_GET_CONTENT -->
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+        </intent>
+    </queries>
+
+</manifest>

@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#B0BEC5"/> <!-- 绿色 -->
+    <size android:width="@dimen/dp_15" android:height="@dimen/dp_15"/> <!-- 圆的大小 -->
+</shape>

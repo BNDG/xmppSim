@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App 样式中引用的颜色 -->
+    <color name="common_primary_color">@color/white</color>
+    <color name="common_primary_dark_color">@color/black</color>
+    <color name="common_accent_color">#5A8DDF</color>
+    <color name="common_window_background_color">#F4F4F4</color>
+    <color name="common_text_color">#333333</color>
+    <color name="common_text_hint_color">@color/panda</color>
+
+    <!-- 按钮按压时的颜色 -->
+    <color name="common_button_pressed_color">#AA5A8DDF</color>
+    <!-- 按钮禁用时的颜色 -->
+    <color name="common_button_disable_color">#BBBBBB</color>
+    <!-- 分割线的颜色 -->
+    <color name="common_line_color">#e4e4e4</color>
+    <!-- 矢量图标的颜色 -->
+    <color name="common_icon_color">#7C7C7C</color>
+
+    <!-- 对话框确认按钮的文本颜色 -->
+    <color name="common_confirm_text_color">#007AFF</color>
+    <!-- 对话框取消按钮的文本颜色 -->
+    <color name="common_cancel_text_color">#F44336</color>
+
+    <!--页面背景色-->
+    <color name="page_color">#f5f8fa</color>
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <!--   **************************************************************** 来自于chat-->
+
+    <!--    标题栏背景色-->
+    <color name="titlebar_bg">#f5f8fa</color>
+    <!--    页面背景主色-->
+    <color name="page_bg_main">#f5f8fa</color>
+    <!--    页面背景主色2-->
+    <color name="sub_page_bg">#f5f8fa</color>
+    <!--    选项卡主色 按压-->
+    <!--    选项卡主色 -->
+    <!--    聊天背景色-->
+    <color name="chat_bg_color">#f5f8fa</color>
+    <color name="common_top_title">#353535</color>
+    <!--    聊天底部panel背景色-->
+    <color name="chat_bottom_panel">#f5f8fa</color>
+    <!--    聊天扩展背景色-->
+    <color name="chat_plugin_bg">#f5f8fa</color>
+    <color name="btn_logout_pressed">#800080</color>
+    <color name="error_item_color">#F6EBE6</color>
+    <color name="btn_gray_pressed_status">#b5b5b6</color>
+    <color name="btn_blue_pressed">#660066</color>
+    <color name="gray_normal">#666667</color>
+    <color name="grid_state_focused">#80000000</color>
+    <color name="black_deep">#FF000000</color>
+
+    <color name="navy_blue">#506484</color>
+    <color name="wechat_btn_green">#800080</color>
+    <color name="chat_send_pressed">#5BB2B8</color>
+    <color name="chat_send_color">#B7ECF0</color>
+    <color name="cursor_chat_et">#800080</color>
+    <color name="chat_receive_color">#C7EDCC</color>
+
+    <color name="setting_content">#80000000</color>
+    <color name="setting_tips">#b5b5b6</color>
+
+    <color name="register_btn_bg_disable">#E1E1E1</color>
+    <color name="register_btn_bg_enable">#800080</color>
+    <color name="register_btn_text_disable">#B4B4B4</color>
+    <color name="register_btn_text_enable">#ffffff</color>
+    <color name="tips_grey">#AFAFAF</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="btn_save_default_color">#E1E1E1</color>
+    <color name="btn_text_default_color">#B5B5B5</color>
+    <color name="common_bg_light_grey">@color/chat_bg_color</color>
+    <color name="common_item_black">#353535</color>
+    <color name="common_item_grey">#999999</color>
+    <color name="bg_light_grey">#F7F7F7</color>
+    <color name="common_divider_grey">#E5E5E5</color>
+    <color name="main_tab_bg">#F7F7F7</color>
+    <color name="common_text_color_black">#191919</color>
+    <color name="divider_grey">#D8D8D8</color>
+    <color name="divider_green">#800080</color>
+
+    <color name="common_hint_grey">#A5A5A5</color>
+    <!--    朋友圈相关-->
+    <color name="transparent">#00000000</color>
+    <color name="default_clickable_color">#cccccc</color>
+    <color name="color_8290AF">#8290AF</color>
+    <color name="praise_item_selector_default">#cccccc</color>
+    <color name="color_moments_default_cover">#232323</color>
+    <color name="cf2f2f2">#f2f2f2</color>
+    <color name="color_grey_cccccc">#f7f7f7</color>
+    <color name="black">#000000</color>
+    <color name="unread_bg">#990899</color>
+    <color name="chat_content_text">#4a4a4a</color>
+    <color name="chat_nickname_text">#A5A5A5</color>
+    <!--  所有菜单的文字颜色-->
+    <color name="main_menu_text_color">#353535</color>
+    <color name="main_menu_bg">#ffffff</color>
+    <color name="primary_chat_user">#800080</color>
+    <color name="chat_gray_normal">#dddee0</color>
+    <color name="chat_subtitle_color">#AAAAAA</color>
+    <!--快速索引bar颜色-->
+    <color name="side_bar">#919091</color>
+    <color name="global_color">#800080</color>
+    <color name="colorAccentTransparent">#4D39A6FF</color>
+    <color name="text_dark_color">#000000</color>
+    <color name="text_link_color">#0888ff</color>
+    <color name="text_gray_color">#555555</color>
+    <color name="navigation_text_selected">#800080</color>
+    <color name="color_f24957">#f24957</color>
+</resources>

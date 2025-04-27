@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+apply from: '../../common.gradle'
+
+android {
+    defaultConfig {
+        buildConfigField('String', 'xmppDomain', '\"' + xmppDomain + '\"')
+        buildConfigField('String', 'xmppHostAddress', '\"' + xmppHostAddress + '\"')
+        buildConfigField('int', 'xmppPort', xmppPort as String)
+        // 清单占位符
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+    configurations {
+        all*.exclude group: 'xpp3', module: 'xpp3'
+        all*.exclude group: 'xpp3', module: 'xpp3_min'
+    }
+    dependencies {
+
+        // smack相关
+        implementation "org.igniterealtime.smack:smack-android-extensions:4.4.8"
+        implementation "org.igniterealtime.smack:smack-tcp:4.4.8"
+        implementation 'org.igniterealtime.smack:smack-core:4.4.8'
+        implementation 'org.igniterealtime.smack:smack-im:4.4.8'
+//        implementation 'org.igniterealtime.smack:smack-bosh:4.4.8'
+        // Smack-Omemo库
+        // Smack-Omemo Signal库（提供Signal协议支持）
+        implementation 'org.igniterealtime.smack:smack-omemo-signal:4.4.8'
+
+        // rxjava rxandroid相关
+        implementation "io.reactivex.rxjava3:rxjava:3.1.2"
+        implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+        //rxjava3
+        implementation 'com.github.liujingxing.rxlife:rxlife-rxjava3:2.2.2'
+
+        implementation 'androidx.core:core-ktx:1.8.0'
+        implementation 'com.google.code.gson:gson:2.10.1'
+
+    }
+}

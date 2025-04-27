@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_48">
+
+    <TextView
+        android:id="@+id/tv_mobile_temp"
+        android:layout_width="@dimen/dp_75"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/dp_8"
+        android:text="@string/phone_num"
+        android:textColor="@color/common_item_black"
+        android:textSize="@dimen/common_item_text_size" />
+
+    <TextView
+        android:id="@+id/tv_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/tv_mobile_temp"
+        android:paddingLeft="@dimen/dp_15"
+        android:text=""
+        android:textColor="@color/navy_blue"
+        android:textSize="@dimen/common_item_text_size" />
+
+    <View
+        android:id="@+id/view_divider_long"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:background="@color/common_line_color"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view_divider_short"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_90"
+        android:background="@color/common_line_color" />
+</RelativeLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg_main"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/ll_main_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_tab_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_chats"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onTabClicked"
+            android:padding="@dimen/dp_3">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_chats"
+                android:layout_width="@dimen/dp_26"
+                android:layout_height="@dimen/dp_26"
+                android:layout_centerHorizontal="true"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/bg_tab_chats" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_chats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_chats"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="@string/tab_chats"
+                android:textColor="@color/main_menu_text_color"
+                android:textSize="@dimen/sp_11" />
+
+            <com.hjq.demo.widget.badgetextview.MaterialBadgeTextView
+                android:id="@+id/unread_msg_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/unread_bg"
+                android:layout_toRightOf="@id/iv_chats"
+                android:textColor="@android:color/white"
+                android:visibility="invisible"
+                android:layout_marginLeft="@dimen/dp_m_10"
+                android:textSize="@dimen/sp_12"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_contacts"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onTabClicked"
+            android:padding="@dimen/dp_3">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_contacts"
+                android:layout_width="@dimen/dp_26"
+                android:layout_height="@dimen/dp_26"
+                android:layout_centerHorizontal="true"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/bg_tab_contacts" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_contacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_contacts"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="@string/tab_contacts"
+                android:textColor="@color/main_menu_text_color"
+                android:textSize="@dimen/sp_11" />
+
+            <com.hjq.demo.widget.badgetextview.MaterialBadgeTextView
+                android:id="@+id/unread_address_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/unread_bg"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="@dimen/dp_m_10"
+                android:textSize="@dimen/sp_12"
+                android:visibility="invisible"
+                android:layout_toRightOf="@id/iv_contacts" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_discover"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:onClick="onTabClicked"
+            android:padding="@dimen/dp_3">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_discover"
+                android:layout_width="@dimen/dp_26"
+                android:layout_height="@dimen/dp_26"
+                android:layout_centerHorizontal="true"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/bg_tab_discover" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_discover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_discover"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="@string/tab_discover"
+                android:textColor="@color/main_menu_text_color"
+                android:textSize="@dimen/sp_11" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_me"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onTabClicked"
+            android:padding="@dimen/dp_3">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_me"
+                android:layout_width="@dimen/dp_26"
+                android:layout_height="@dimen/dp_26"
+                android:layout_centerHorizontal="true"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/bg_tab_me" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_me"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="@string/tab_me"
+                android:textColor="@color/main_menu_text_color"
+                android:textSize="@dimen/sp_11" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_temp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_above="@id/ll_main_button"
+        android:background="#d6d6d6" />
+
+    <com.hjq.widget.layout.NoScrollViewPager
+        android:id="@+id/vp_home_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view_temp"/>
+
+</RelativeLayout>

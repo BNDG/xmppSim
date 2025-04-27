@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/msg_padding_bottom">
+
+    <TextView
+        android:id="@+id/tv_timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        tools:text="17:00"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_activity">
+
+        <ImageView
+            android:id="@+id/sdv_avatar"
+            android:layout_width="@dimen/chat_avatar_width"
+            android:layout_height="@dimen/chat_avatar_height"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_chat_activity"
+            android:src="@mipmap/default_user_avatar"/>
+
+        <com.hjq.demo.widget.ChatView xmlns:chat="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cv_chat_content"
+            android:layout_toLeftOf="@+id/sdv_avatar"
+            style="@style/chat_sent_bubble">
+
+            <com.hjq.demo.chat.widget.CorrectlyMeasuringTextView
+                android:id="@+id/tv_chat_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxWidth="@dimen/chat_content_max_width"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="3dip"
+                tools:text="**C bot:** biange200, 不要刷屏（第一次警告） 506.4599462900915/512"
+                android:autoLink="web"
+                android:textColorLink="@color/text_link_color"
+                android:textColor="@color/common_item_black"
+                android:textSize="@dimen/chat_msg_text_size" />
+        </com.hjq.demo.widget.ChatView>
+
+        <ProgressBar
+            android:id="@+id/pb_sending"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_centerVertical="true"
+            tools:visibility="gone"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toLeftOf="@id/cv_chat_content"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_msg_status"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toLeftOf="@id/cv_chat_content"
+            tools:visibility="visible"
+            android:src="@drawable/msg_state_failed_resend"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

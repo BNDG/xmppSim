@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_8">
+
+    <ImageView
+        android:layout_width="@dimen/dp_45"
+        android:layout_height="@dimen/dp_45"
+        android:src="@drawable/icon_incomming_call" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_8">
+
+        <TextView
+            android:id="@+id/caller_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Call erasdfasdfame"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/call_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Video Call"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/decline_button"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_8"
+        android:background="@drawable/shape_round_red"
+        android:enabled="true"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/white"
+        android:text="@string/reject" />
+
+    <TextView
+        android:id="@+id/answer_button"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_8"
+        android:background="@drawable/btn_call_answer"
+        android:enabled="true"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/white"
+        android:text="@string/answer" />
+
+</LinearLayout>

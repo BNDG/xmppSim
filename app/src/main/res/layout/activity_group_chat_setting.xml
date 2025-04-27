@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_bg_color"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/chat_bg_color"
+            android:paddingBottom="@dimen/dp_20"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_menu_bg"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_all_members"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_menu_bg"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_15"
+                android:text="@string/show_all_members"
+                android:textColor="@color/chat_subtitle_color"
+                android:visibility="gone" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/sb_group_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_leftText="@string/group_name"
+                app:bar_rightDrawable="@drawable/arrows_right_ic"
+                tools:bar_rightText="name is group xxxx name is group xxxx 123" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/rl_search_chat_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                app:bar_leftText="@string/search_chat_msg"
+                app:bar_rightDrawable="@drawable/arrows_right_ic"
+                tools:bar_rightHint="@string/setting_language_simple" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/rl_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                app:bar_leftText="@string/group_info"
+                app:bar_rightDrawable="@drawable/arrows_right_ic"
+                tools:bar_rightHint="@string/setting_language_simple" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/rl_change_group_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_leftText="@string/manage_group"
+                app:bar_rightDrawable="@drawable/arrows_right_ic"
+                tools:bar_rightHint="@string/setting_language_simple" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/my_group_nick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:bar_leftText="@string/my_group_nick"
+                app:bar_rightDrawable="@drawable/arrows_right_ic"
+                tools:bar_rightText="alfred" />
+
+            <com.hjq.widget.layout.SettingBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_leftText="@string/mute_notifications">
+
+                <com.hjq.widget.view.SwitchButton
+                    android:id="@+id/sb_mute"
+                    android:layout_width="@dimen/dp_42"
+                    android:layout_height="@dimen/dp_42"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginHorizontal="@dimen/dp_15"
+                    android:checked="false" />
+
+            </com.hjq.widget.layout.SettingBar>
+
+            <com.hjq.widget.layout.SettingBar
+                android:id="@+id/rl_clear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                app:bar_leftText="@string/clear_chat_msg"
+                app:bar_rightDrawable="@drawable/arrows_right_ic"
+                tools:bar_rightHint="@string/setting_language_simple" />
+
+            <RelativeLayout
+                android:id="@+id/rl_exit_group"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_menu_height"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/main_menu_bg"
+                android:padding="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/leave_room"
+                    android:textColor="@color/btn_logout_pressed"
+                    android:textSize="@dimen/sp_16" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/bt_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/update_content"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:visibility="gone"
+                tools:text="group info" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

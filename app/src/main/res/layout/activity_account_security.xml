@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sub_page_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.hjq.widget.layout.SettingBar
+                    android:id="@+id/sb_sim_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:bar_leftText="@string/wechat_id" />
+
+                <com.hjq.widget.layout.SettingBar
+                    android:id="@+id/rl_finger_print"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_15"
+                    app:bar_leftText="OMEMO 指纹"/>
+
+                <com.hjq.widget.layout.SettingBar
+                    android:id="@+id/rl_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_marginTop="@dimen/dp_15"
+                    app:bar_leftText="@string/modify_password"
+                    app:bar_rightDrawable="@drawable/arrows_right_ic" />
+
+                <com.hjq.widget.layout.SettingBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:bar_leftText="@string/voice_print"
+                    app:bar_rightDrawable="@drawable/arrows_right_ic" />
+
+                <com.hjq.widget.layout.SettingBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:bar_leftText="@string/emergency_contacts"
+                    app:bar_rightDrawable="@drawable/arrows_right_ic" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:layout_marginTop="@dimen/common_thick_divider_height"
+                    android:background="@drawable/item_tab_bg"
+                    android:clickable="true"
+                    android:paddingLeft="@dimen/dp_12"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_wechat_security_center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/setting_btn_margin_right"
+                            android:text="@string/wechat_security_center"
+                            android:textColor="@color/main_menu_text_color"
+                            android:textSize="@dimen/account_security_text_size" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_wechat_security_center"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:layout_marginRight="@dimen/dp_40"
+                            android:text="@string/wechat_security_center_tips"
+                            android:textColor="@color/setting_tips"
+                            android:textSize="@dimen/sp_13" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:src="@drawable/arrows_right_ic" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

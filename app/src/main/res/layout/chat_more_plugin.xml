@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_tab_bg"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <!-- 图片，表情，名片等按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/chat_plugin_bg"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_30"
+            android:paddingBottom="@dimen/dp_20"
+            android:paddingLeft="@dimen/dp_12"
+            android:paddingRight="@dimen/dp_12"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/ll_image_album"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/chat_multiple_type_bg_width"
+                    android:layout_height="@dimen/chat_multiple_type_bg_height"
+                    android:background="@drawable/bg_chat_multiple_type">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/chat_multiple_type_icon_width"
+                        android:layout_height="@dimen/chat_multiple_type_icon_height"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/icon_chat_photo_album"
+                        android:scaleType="fitCenter" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/chat_multiple_type_text_margin_top"
+                    android:gravity="center"
+                    android:text="@string/album"
+                    android:textColor="#727171"
+                    android:textSize="@dimen/chat_multiple_type_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_image_camera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/chat_multiple_type_bg_width"
+                    android:layout_height="@dimen/chat_multiple_type_bg_height"
+                    android:background="@drawable/bg_chat_multiple_type">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/chat_multiple_type_icon_width"
+                        android:layout_height="@dimen/chat_multiple_type_icon_height"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/icon_chat_shoot"
+                        android:scaleType="fitCenter" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/chat_multiple_type_text_margin_top"
+                    android:gravity="center"
+                    android:text="@string/camera"
+                    android:textColor="#727171"
+                    android:textSize="@dimen/chat_multiple_type_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/chat_multiple_type_bg_width"
+                    android:layout_height="@dimen/chat_multiple_type_bg_height"
+                    android:background="@drawable/bg_chat_multiple_type">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_chat_file"
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_centerInParent="true"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:background="@drawable/baseline_upload_file_24"
+                        android:scaleType="fitCenter" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/chat_multiple_type_text_margin_top"
+                    android:gravity="center"
+                    android:text="@string/file"
+                    android:textColor="#727171"
+                    android:textSize="@dimen/chat_multiple_type_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_video_call"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/chat_multiple_type_bg_width"
+                    android:layout_height="@dimen/chat_multiple_type_bg_height"
+                    android:background="@drawable/bg_chat_multiple_type">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_chat_video"
+                        android:layout_width="@dimen/chat_multiple_type_icon_width"
+                        android:layout_height="@dimen/chat_multiple_type_icon_height"
+                        android:layout_centerInParent="true"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_chat_vedio" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/chat_multiple_type_text_margin_top"
+                    android:gravity="center"
+                    android:text="@string/file"
+                    android:textColor="#727171"
+                    android:textSize="@dimen/chat_multiple_type_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:visibility="gone"
+            android:weightSum="4">
+            <LinearLayout
+                android:id="@+id/ll_chat_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/chat_multiple_type_bg_width"
+                    android:layout_height="@dimen/chat_multiple_type_bg_height"
+                    android:background="@drawable/bg_chat_multiple_type">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/chat_multiple_type_icon_width"
+                        android:layout_height="@dimen/chat_multiple_type_icon_height"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_chat_location" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/chat_multiple_type_text_margin_top"
+                    android:gravity="center"
+                    android:text="位置"
+                    android:textColor="#727171"
+                    android:textSize="@dimen/chat_multiple_type_text_size" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/chat_multiple_type_bg_width"
+                    android:layout_height="@dimen/chat_multiple_type_bg_height"
+                    android:background="@drawable/bg_chat_multiple_type">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/chat_multiple_type_icon_width"
+                        android:layout_height="@dimen/chat_multiple_type_icon_height"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/icon_chat_transfer"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:scaleType="fitCenter" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/chat_multiple_type_text_margin_top"
+                    android:gravity="center"
+                    android:text="转账"
+                    android:textColor="#727171"
+                    android:textSize="@dimen/chat_multiple_type_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/chat_multiple_type_bg_width"
+                    android:layout_height="@dimen/chat_multiple_type_bg_height"
+                    android:background="@drawable/bg_chat_multiple_type">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/chat_multiple_type_icon_width"
+                        android:layout_height="@dimen/chat_multiple_type_icon_height"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/icon_chat_voice_input"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:scaleType="fitCenter" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/chat_multiple_type_text_margin_top"
+                    android:gravity="center"
+                    android:text="语音输入"
+                    android:textColor="#727171"
+                    android:textSize="@dimen/chat_multiple_type_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/chat_multiple_type_bg_width"
+                    android:layout_height="@dimen/chat_multiple_type_bg_height"
+                    android:background="@drawable/bg_chat_multiple_type">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/chat_multiple_type_icon_width"
+                        android:layout_height="@dimen/chat_multiple_type_icon_height"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/icon_chat_collect"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:scaleType="fitCenter" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/chat_multiple_type_text_margin_top"
+                    android:gravity="center"
+                    android:text="我的收藏"
+                    android:textColor="#727171"
+                    android:textSize="@dimen/chat_multiple_type_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

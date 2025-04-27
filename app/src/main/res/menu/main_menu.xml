@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item android:id="@+id/action_chat"-->
+    <!--android:title="@string/chat_viewer" />-->
+
+    <item android:id="@+id/rl_add_friends"
+        android:title="@string/add_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@null"/>
+
+    <item android:id="@+id/rl_scan_qr_code"
+        android:title="@string/scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@null"/>
+
+    <item android:id="@+id/rl_join_group"
+        android:title="@string/join_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@null"/>
+
+</menu>

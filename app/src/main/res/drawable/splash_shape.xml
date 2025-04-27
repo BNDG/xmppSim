@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 设置渐变类型为辐射（中心扩散） -->
+    <!-- 渐变中心的X坐标（0到1的比例），0.5表示正中心 -->
+    <!-- 渐变中心的Y坐标（0到1的比例），0.5表示正中心 -->
+    <!-- 渐变半径，1表示从中心到最外层 -->
+    <!-- 渐变开始颜色 -->
+    <!-- 渐变结束颜色 -->
+    <gradient
+        android:centerX="0.5"
+        android:centerY="0.5"
+        android:endColor="#0050A8"
+        android:startColor="#007AFF"
+        android:angle="270"
+        android:type="linear">
+
+    </gradient>
+</shape>

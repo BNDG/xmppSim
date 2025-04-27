@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 默认分割线大小 -->
+    <dimen name="line_size">1px</dimen>
+
+    <!-- 默认按钮的圆角大小 -->
+    <dimen name="button_circle_size">999dp</dimen>
+
+    <!-- 通用对话框圆角大小 -->
+    <dimen name="dialog_ui_round_size">15dp</dimen>
+
+    <!--    来自于chat-->
+    <dimen name="height_top_bar">48dp</dimen>
+    <dimen name="margin_chat_activity">@dimen/dp_8</dimen>
+
+    <dimen name="edit_contact_edittext_height">52dp</dimen>
+
+    <!-- contacts fragment -->
+    <dimen name="contacts_layout_height">50dp</dimen>
+    <dimen name="contacts_text_size">15sp</dimen>
+
+    <!-- discover fragment -->
+    <dimen name="discover_layout_height">50dp</dimen>
+    <dimen name="discover_layout_padding_start">8dp</dimen>
+    <dimen name="discover_icon_margin_left">5dp</dimen>
+    <dimen name="discover_icon_width">20dp</dimen>
+    <dimen name="discover_icon_height">20dp</dimen>
+    <dimen name="discover_text_margin_left">15dp</dimen>
+    <dimen name="discover_text_size">15.5sp</dimen>
+    <dimen name="discover_divider_margin_left">40dp</dimen>
+    <dimen name="discover_thick_divider_height">8dp</dimen>
+
+    <!-- me fragment -->
+    <dimen name="me_layout_padding_left">8dp</dimen>
+
+    <!-- account security activity -->
+    <dimen name="account_security_text_size">15.5sp</dimen>
+
+    <!-- more security setting -->
+
+    <!-- setting activity -->
+    <dimen name="setting_text_size">15.5sp</dimen>
+
+    <!-- my profile activity -->
+    <dimen name="my_profile_text_size">15.5sp</dimen>
+
+    <dimen name="top_back_width">42dp</dimen>
+    <dimen name="top_bar_height">42dp</dimen>
+
+    <dimen name="save_btn_margin_right">12dp</dimen>
+    <dimen name="setting_btn_margin_right">5dp</dimen>
+    <dimen name="save_btn_height">30dp</dimen>
+
+    <dimen name="common_item_text_size">15.5sp</dimen>
+    <dimen name="common_thick_divider_height">8dp</dimen>
+
+    <dimen name="top_bar_title_text_size">15.5sp</dimen>
+
+    <dimen name="chat_multiple_type_icon_width">42dp</dimen>
+    <dimen name="chat_multiple_type_icon_height">42dp</dimen>
+    <dimen name="chat_multiple_type_bg_width">48dp</dimen>
+    <dimen name="chat_multiple_type_bg_height">48dp</dimen>
+    <dimen name="chat_multiple_type_text_size">11sp</dimen>
+    <dimen name="chat_multiple_type_text_margin_top">5dp</dimen>
+
+    <dimen name="conversation_msg_text_size">14sp</dimen>
+    <dimen name="chat_avatar_width">@dimen/dp_40</dimen>
+    <dimen name="chat_avatar_height">@dimen/dp_40</dimen>
+    <dimen name="chat_msg_text_size">15.5sp</dimen>
+    <dimen name="chat_nickname_text_size">12sp</dimen>
+    <dimen name="chat_size_small">12sp</dimen>
+    <dimen name="chat_size_normal">14sp</dimen>
+    <dimen name="chat_size_big">16sp</dimen>
+    <dimen name="main_menu_height">50dip</dimen>
+    <dimen name="chat_user_head">6dp</dimen>
+    <dimen name="msg_padding_bottom">10dp</dimen>
+    <dimen name="chat_size_middle">16sp</dimen>
+    <dimen name="label_margin_left">14dp</dimen>
+    <dimen name="chat_content_max_width">@dimen/dp_250</dimen>
+
+</resources>

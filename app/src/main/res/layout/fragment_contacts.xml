@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/sub_page_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_alignParentTop="true"
+        android:background="@color/titlebar_bg">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="@string/tab_contacts"
+            android:textColor="@color/common_top_title"
+            android:textSize="@dimen/top_bar_title_text_size" />
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_5"
+            android:clickable="true"
+            android:src="@drawable/icon_main_activity_add_normal" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/iv_add"
+            android:clickable="true"
+            android:src="@drawable/icon_main_activity_search_normal" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.hjq.demo.chat.widget.LQRRecyclerView
+                android:id="@+id/rvContacts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:rv_divider_color="@color/common_line_color"
+                app:rv_divider_size="1px"/>
+
+            <com.hjq.demo.chat.widget.QuickIndexBar
+                android:id="@+id/qib"
+                android:layout_width="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_50"
+                android:layout_marginBottom="@dimen/dp_50"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"/>
+
+            <!--字母对话框-->
+            <TextView
+                android:id="@+id/tvLetter"
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_contact_letter_bg"
+                android:gravity="center"
+                android:text="A"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

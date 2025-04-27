@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 禁用状态 -->
+    <item android:color="@color/btn_text_default_color" android:state_enabled="false" />
+
+    <!-- 默认状态 -->
+    <item android:color="@color/white" />
+
+</selector>
