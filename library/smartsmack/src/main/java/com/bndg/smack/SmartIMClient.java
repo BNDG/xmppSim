@@ -995,6 +995,7 @@ public class SmartIMClient {
             Jid messageFromJid = message.getFrom();
             SmartMessage msgEntity = new SmartMessage();
             List<ExtensionElement> messageExtensions = message.getExtensions();
+            String oobUrl = "";
             for (ExtensionElement extension : messageExtensions) {
                 if (ArchivedExtension.ELEMENT.equals(extension.getElementName())) {
                     ArchivedExtension archivedExtension = (ArchivedExtension) extension;
@@ -1011,10 +1012,7 @@ public class SmartIMClient {
                     senderNickname = senderInfoExtension.getSenderNickname();
                 } else if (OobDataExtension.NAMESPACE.equals(extension.getNamespace())) {
                     OobDataExtension oobDataExtension = (OobDataExtension) extension;
-                    String url = oobDataExtension.getUrl();
-                    if (!TextUtils.isEmpty(url)) {
-                        messageType = OtherUtil.getMessageTypeByUrl(url);
-                    }
+                    oobUrl = oobDataExtension.getUrl();
                 } else if (TestGroupMembersExtension.ELEMENT_NAME.equals(extension.getElementName())) {
                     testGroupMembersExtension = (TestGroupMembersExtension) extension;
                 } else if (OmemoElement_VAxolotl.NAME_ENCRYPTED.equals(extension.getElementName())) {
@@ -1046,6 +1044,10 @@ public class SmartIMClient {
                         msgEntity.addExtensions(extension.toXML());
                     }
                 }
+            }
+            // 有oob数据 并且类型是TEXT 说明是其他客户端发送的
+            if (!TextUtils.isEmpty(oobUrl) && SmartContentType.TEXT.equals(messageType)) {
+                messageType = OtherUtil.getMessageTypeByUrl(oobUrl);
             }
             if (testGroupMembersExtension != null) {
                 if (timestamp != null) {

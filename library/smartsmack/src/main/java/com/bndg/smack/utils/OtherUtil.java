@@ -49,7 +49,7 @@ public class OtherUtil {
         } else if (matcherUrl(url, VIDEO_REGEX)) {
             return SmartContentType.TEXT;
         }
-        return SmartContentType.TEXT;
+        return SmartContentType.FILE;
     }
 
     public static String getAndroidId(){

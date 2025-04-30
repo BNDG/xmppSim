@@ -4,8 +4,8 @@
 
 #### 下载链接
 
-https://wwhq.lanzouu.com/ipuEF2u9epef
-密码:fovv
+https://wwhq.lanzouu.com/ivS6x2uy1bti
+密码:7y2b
 
 #### 推荐XMPP客户端
 
