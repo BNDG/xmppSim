@@ -14,6 +14,7 @@ import com.hjq.demo.chat.entity.MemberVoiceEntity
 import com.hjq.demo.chat.entity.RegionEntity
 import com.hjq.demo.chat.entity.User
 import com.hjq.demo.chat.utils.PreferencesUtil
+import com.hjq.demo.manager.ActivityManager
 import com.hjq.demo.utils.Trace
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Completable
@@ -38,7 +39,7 @@ class DBManager(context: Context) {
             if (instance == null) {
                 synchronized(DBManager::class.java) {
                     if (instance == null) {
-                        instance = DBManager(context)
+                        instance = DBManager(ActivityManager.getInstance().application)
                     }
                 }
             }

@@ -900,7 +900,7 @@ public class SmartMessageAdapter extends BaseMultiItemQuickAdapter<ChatMessage, 
      * @param parentPosition
      */
     private void showCustomPop(View targetView, ChatMessage message, String selectedText, int parentPosition) {
-        CustomPop msgPop = new CustomPop(getContext(), targetView, false);
+        CustomPop msgPop = new CustomPop(getContext(), targetView, message.getMessageType().equals(SmartContentType.TEXT));
         if (!TextUtils.isEmpty(selectedText)) {
             msgPop.addItem(
                     R.drawable.ic_msg_copy,

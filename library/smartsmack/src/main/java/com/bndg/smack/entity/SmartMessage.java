@@ -56,6 +56,7 @@ public class SmartMessage implements Parcelable {
     private boolean isOfflineMsg;
     // 消息是否不计入会话未读数 发送方设置。默认为需要计入会话未读数
     private boolean isExcludedFromUnreadCount = true;
+    private boolean isChangeType;
     private ArraySet<CharSequence> extensionsXml = new ArraySet<>();
 
     public ArraySet<CharSequence> getExtensionsXml() {
@@ -230,6 +231,9 @@ public class SmartMessage implements Parcelable {
     }
 
     public void setMessageContent(String messageContent) {
+        if(isChangeType) {
+            messageContent = messageContent.trim();
+        }
         this.messageContent = messageContent;
     }
 
@@ -338,5 +342,9 @@ public class SmartMessage implements Parcelable {
 
     public String getGroupSubject() {
         return groupSubject;
+    }
+
+    public void isReChangeType(boolean isChangeType) {
+        this.isChangeType = isChangeType;
     }
 }

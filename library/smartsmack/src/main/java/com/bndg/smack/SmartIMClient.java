@@ -1048,6 +1048,7 @@ public class SmartIMClient {
             // 有oob数据 并且类型是TEXT 说明是其他客户端发送的
             if (!TextUtils.isEmpty(oobUrl) && SmartContentType.TEXT.equals(messageType)) {
                 messageType = OtherUtil.getMessageTypeByUrl(oobUrl);
+                msgEntity.isReChangeType(true);
             }
             if (testGroupMembersExtension != null) {
                 if (timestamp != null) {

@@ -433,7 +433,7 @@ public class ChatActivity extends ChatBaseActivity implements View.OnClickListen
                                 item.setStatus(MessageStatus.SENDING.value());
                                 smartMessageAdapter.notifyItemChanged(position);
                                 // 重发图片消息
-                                mFileBeanSendQueue.add(prepareImageFileMsg(item.getFileLocalPath(), item.getOriginId()));
+                                prepareImageFileMsg(item.getFileLocalPath(), item.getOriginId());
                                 uploadImageFile();
                             } else {
                                 toast(R.string.file_not_exist);
@@ -1875,7 +1875,7 @@ public class ChatActivity extends ChatBaseActivity implements View.OnClickListen
         // 检查文件名是否以 ".gif" 结尾 或者是原图
         if (filePath.toLowerCase().endsWith(".gif") || isOriginalImg) {
             String absolutePath = new File(filePath).getAbsolutePath();
-            mFileBeanSendQueue.add(prepareImageFileMsg(absolutePath, ""));
+            prepareImageFileMsg(absolutePath, "");
             uploadImageFile();
             compressAndSendImg();
         } else {
@@ -1891,12 +1891,12 @@ public class ChatActivity extends ChatBaseActivity implements View.OnClickListen
                             Trace.d("callback: 输出文件路径>>>" + outfile);
                             if (!isSuccess) {
                                 // 压缩失败，发送原图
-                                mFileBeanSendQueue.add(prepareImageFileMsg(filePath, ""));
+                                prepareImageFileMsg(filePath, "");
                                 uploadImageFile();
                                 compressAndSendImg();
                                 CrashReport.postCatchedException(t);  // bugly会将这个throwable上报
                             } else {
-                                mFileBeanSendQueue.add(prepareImageFileMsg(outfile, ""));
+                                prepareImageFileMsg(outfile, "");
                                 uploadImageFile();
                                 compressAndSendImg();
                             }
@@ -1938,10 +1938,9 @@ public class ChatActivity extends ChatBaseActivity implements View.OnClickListen
      * 上传文件
      *
      * @param outfilePath
-     * @param msgType
      * @param originId
      */
-    private ChatImageBean prepareImageFileMsg(String outfilePath, String originId) {
+    private void prepareImageFileMsg(String outfilePath, String originId) {
         ChatImageBean imageFileBean = ChatMessageManager.getInstance().createImageFileBean(conversationId, conversationTitle, conversationType, outfilePath);
         if (TextUtils.isEmpty(originId)) {
             imageFileBean.originId = addFileMsg(outfilePath, SmartContentType.IMAGE, imageFileBean);
@@ -1949,7 +1948,8 @@ public class ChatActivity extends ChatBaseActivity implements View.OnClickListen
             // 重发消息的情况 已经有originId
             imageFileBean.originId = originId;
         }
-        return imageFileBean;
+        mFileBeanSendQueue.add(imageFileBean);
+        uploadImageFile();
     }
 
     private void uploadImageFile() {
